@@ -10,12 +10,12 @@ describe("Local Storage", function() {
   });
 
   it("Deve ter definido no localStorage o App.", function() {
-    expect(localStorage.getItem('App')).toBeDefined();
+    expect(localStorage.getItem("App")).toBeDefined();
   });
 
   it("Deve ter definido no localStorage o App como true.", function() {
     var appValue = localStorage.getItem("App");
 
     expect(appValue).toBe("true");
-  })
+  });
 });

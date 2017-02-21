@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Tue Feb 21 2017 13:03:56 GMT-0300 (BRT)
 
-var webpackConfig = require('./webpack.config.js');
+var webpackConfig = require("./webpack.config.js");
 delete webpackConfig.entry;
 
 module.exports = function(config) {
@@ -82,5 +82,5 @@ module.exports = function(config) {
         require("karma-webpack"),
         require("karma-jasmine")
     ]
-  })
-}
+  });
+};
