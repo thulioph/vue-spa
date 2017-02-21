@@ -1,6 +1,6 @@
-var App = require('../src/App.vue');
+var App = require("../src/App.vue");
 
-describe('Local Storage', function() {
+describe("Local Storage", function() {
   beforeAll(function() {
     App.methods.InitApp();
   });
@@ -9,13 +9,13 @@ describe('Local Storage', function() {
     localStorage.clear();
   });
 
-  it('Deve ter definido no localStorage o App.', function() {
+  it("Deve ter definido no localStorage o App.", function() {
     expect(localStorage.getItem('App')).toBeDefined();
   });
 
-  it('Deve ter definido no localStorage o App como true.', function() {
-    var appValue = localStorage.getItem('App');
+  it("Deve ter definido no localStorage o App como true.", function() {
+    var appValue = localStorage.getItem("App");
 
-    expect(appValue).toBe('true');
+    expect(appValue).toBe("true");
   })
 });
