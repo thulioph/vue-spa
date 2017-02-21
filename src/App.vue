@@ -12,7 +12,12 @@
 <script>
 
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    InitApp() {
+      localStorage.setItem('App', true);
+    }
+  }
 }
 </script>
 
