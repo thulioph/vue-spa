@@ -8,44 +8,52 @@
           </a>
         </div>
 
-        <span class="nav-toggle">
+        <span class="nav-toggle" @click="showNavbar = !showNavbar;">
           <span></span>
           <span></span>
           <span></span>
         </span>
 
-        <!-- use is-active class to activate the menu -->
-        <div class="nav-right nav-menu">
+        <div class="nav-right nav-menu" :class="{ 'is-active': showNavbar }">
           <a
             href="#home"
-            class="nav-item is-tab  is-active">
+            :class="{ 'is-active': this.active == 'home' }"
+            @click.prevent="goTo($event)"
+            class="nav-item is-tab">
             Home
           </a>
 
           <a
             href="#sobre"
-            class="nav-item is-tab is-hidden-mobile">
+            :class="{ 'is-active': this.active == 'sobre' }"
+            @click.prevent="goTo($event)"
+            class="nav-item is-tab">
             O Caldinho
           </a>
 
           <a
             href="#cardapio"
-            class="nav-item is-tab is-hidden-mobile">
+            :class="{ 'is-active': this.active == 'cardapio' }"
+            @click.prevent="goTo($event)"
+            class="nav-item is-tab">
             Cardápio
           </a>
 
           <a
-            href="#"
-            class="nav-item is-tab is-hidden-mobile">
+            href="#caldinho360"
+            :class="{ 'is-active': this.active == 'caldinho360' }"
+            @click.prevent="goTo($event)"
+            class="nav-item is-tab">
             Caldinho 360º
           </a>
 
           <a
             href="#contato"
-            class="nav-item is-tab is-hidden-mobile">
+            :class="{ 'is-active': this.active == 'contato' }"
+            @click.prevent="goTo($event)"
+            class="nav-item is-tab">
             Contato
           </a>
-
         </div>
       </div>
     </nav>
@@ -54,7 +62,39 @@
 
 <script>
   export default {
-    name: 'Header'
+    name: 'Header',
+    methods: {
+      goTo($event) {
+        let targetElement = event.target.hash.replace('#', '');
+        let element = document.getElementById(targetElement).offsetTop - 90;
+
+        // collapse the navbar
+        this.showNavbar = false;
+
+        // active the clicked element
+        this.active = targetElement;
+
+        // scroll body
+        window.scrollTo(0, element);
+      },
+
+      handleScroll (event) {
+        console.warn(event);
+        // this.scrolled = window.scrollY > 0;
+      }
+    },
+    data() {
+      return {
+        active: 'home',
+        showNavbar: false
+      }
+    },
+    created() {
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed() {
+      window.removeEventListener('scroll', this.handleScroll);
+    },
   }
 </script>
 
