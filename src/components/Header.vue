@@ -18,34 +18,43 @@
         <div class="nav-right nav-menu">
           <a
             href="#home"
-            class="nav-item is-tab  is-active">
+            :class="{ 'is-active': this.active == 'home' }"
+            @click.prevent="goTo($event)"
+            class="nav-item is-tab">
             Home
           </a>
 
           <a
             href="#sobre"
+            :class="{ 'is-active': this.active == 'sobre' }"
+            @click.prevent="goTo($event)"
             class="nav-item is-tab is-hidden-mobile">
             O Caldinho
           </a>
 
           <a
             href="#cardapio"
+            :class="{ 'is-active': this.active == 'cardapio' }"
+            @click.prevent="goTo($event)"
             class="nav-item is-tab is-hidden-mobile">
             Cardápio
           </a>
 
           <a
-            href="#"
+            href="#caldinho360"
+            :class="{ 'is-active': this.active == 'caldinho360' }"
+            @click.prevent="goTo($event)"
             class="nav-item is-tab is-hidden-mobile">
             Caldinho 360º
           </a>
 
           <a
             href="#contato"
+            :class="{ 'is-active': this.active == 'contato' }"
+            @click.prevent="goTo($event)"
             class="nav-item is-tab is-hidden-mobile">
             Contato
           </a>
-
         </div>
       </div>
     </nav>
@@ -54,7 +63,32 @@
 
 <script>
   export default {
-    name: 'Header'
+    name: 'Header',
+    methods: {
+      goTo($event) {
+        let targetElement = event.target.hash.replace('#', '');
+        let element = document.getElementById(targetElement).offsetTop;
+
+        this.active = targetElement;
+        window.scrollTo(0, element);
+      },
+
+      handleScroll (event) {
+        console.warn(event);
+        // this.scrolled = window.scrollY > 0;
+      }
+    },
+    data() {
+      return {
+        active: 'home'
+      }
+    },
+    created() {
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed() {
+      window.removeEventListener('scroll', this.handleScroll);
+    },
   }
 </script>
 
