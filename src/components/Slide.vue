@@ -38,4 +38,8 @@
     background-color: pink;
     width: 100%;
   }
+
+  .slide-image {
+    overflow: hidden;
+  }
 </style>

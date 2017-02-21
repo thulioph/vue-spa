@@ -4,7 +4,27 @@
 
     <cn-slide>
       <div slot="slide-image">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
+        <slick ref="slick" :options="slickOptions">
+          <a href="http://placehold.it/800x400">
+            <img src="http://placehold.it/800x400" alt="">
+          </a>
+
+          <a href="http://placehold.it/800x400">
+            <img src="http://placehold.it/800x400" alt="">
+          </a>
+
+          <a href="http://placehold.it/800x400">
+            <img src="http://placehold.it/800x400" alt="">
+          </a>
+
+          <a href="http://placehold.it/800x400">
+            <img src="http://placehold.it/800x400" alt="">
+          </a>
+
+          <a href="http://placehold.it/800x400">
+            <img src="http://placehold.it/800x400" alt="">
+          </a>
+        </slick>
       </div>
     </cn-slide>
 
@@ -40,20 +60,37 @@
 </template>
 
 <script>
+  // Components
   import cnHeader from './components/Header.vue';
   import cnSlide from './components/Slide.vue';
   import cnContact from './components/Contact.vue';
   import cnMap from './components/Map.vue';
   import cnFooter from './components/Footer.vue';
 
+  // Libs
+  import Slick from 'vue-slick';
+
   export default {
     name: 'AppRecife',
     components: {
+      Slick,
       cnHeader,
       cnSlide,
       cnContact,
       cnMap,
       cnFooter
+    },
+    data() {
+      return {
+        slickOptions: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          infinite: true,
+          speed: 300,
+          centerMode: true
+        }
+      }
     }
   }
 </script>
