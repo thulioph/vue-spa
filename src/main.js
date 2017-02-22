@@ -9,6 +9,10 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: '/',
+    component: App
+  },
+  {
     path: '/recife',
     component: AppRecife
   },
@@ -26,5 +30,5 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  components: { App }
 })

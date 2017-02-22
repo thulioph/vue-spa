@@ -2,16 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Caldinho do Nenem</title>
+    <title>CALDINHO DO NENEM</title>
 
     <!-- Css / Lib -->
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <style>
+      body { font-family: 'Open Sans', sans-serif; }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <main>
+        <router-view></router-view>
+      </main>
+    </div>
 
     <script src="/dist/build.js"></script>
   </body>

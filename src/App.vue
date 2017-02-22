@@ -1,16 +1,64 @@
 <template>
   <div>
-    <h1>Escolha pra onde ir..</h1>
+    <main class="app-container columns">
+      <section class="choose-box">
+        <router-link
+          class="choose-btn recife"
+          title="Ir para o site do Pina"
+          to="/recife">Pina - Recife</router-link>
 
-    <router-link to="/porto">Porto</router-link>
-    <router-link to="/recife">Recife</router-link>
+        <h1>Escolha o seu destino</h1>
 
-    <router-view></router-view>
+        <router-link
+          class="choose-btn porto"
+          title="Ir para o site de Porto"
+          to="/porto">Porto de Galinhas</router-link>
+      </section>
+    </main>
+
+    <footer class="footer-primary columns">
+      <aside class="column is-one-third">
+        <h3>Endereços:</h3>
+        <p>R. Nogueira de Souza, 363, Pina, Recife - PE</p>
+        <p>Praça das Piscinas Naturais, Galeria Verdes Mares, 1º Andar, Porto de Galinhas-PE</p>
+
+        <h3>Fone:</h3>
+        <a href="tel+558135521962">81 - 3552.1962</a>
+      </aside>
+
+      <aside class="column is-one-third">
+        <a
+          href="https://fb.com"
+          class="social-link facebook"
+          title="Facebook"
+          target="_blank">facebook</a>
+
+        <a
+          href="https://instagram.com"
+          class="social-link instagram"
+          title="Instagram"
+          target="_blank">instagram</a>
+
+        <div class="control input-wrapper">
+          <input
+            class="input"
+            type="email"
+            placeholder="cadastre seu email">
+
+          <button type="submit" class="button is-primary">ok</button>
+        </div>
+      </aside>
+
+      <aside class="column is-one-third">
+        <h3>Horário de funcionamento:</h3>
+        <p>De domingo a Domingo</p>
+        <p>das 11h às 00h.</p>
+      </aside>
+    </footer>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'app',
   methods: {
@@ -22,4 +70,108 @@ export default {
 </script>
 
 <style lang="scss">
+  $orange: #E1B725;
+  $black: #282828;
+  $white: #FFFFFF;
+
+  .app-container {
+    position: relative;
+    min-height: 940px;
+    margin-bottom: 0 !important;
+    border-bottom: 20px solid $orange;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: url('./assets/bg-index.jpg');
+  }
+
+  .choose-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -560px;
+    margin-top: -305px;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 50px;
+      color: $white;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 40px;
+      width: 40%;
+    }
+  }
+
+  .choose-btn {
+    cursor: pointer;
+    width: 265px;
+    height: 390px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 780px;
+    vertical-align: middle;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+
+    &.recife {
+      background-image: url('./assets/logo-recife.png');
+    }
+
+    &.porto {
+      background-image: url('./assets/logo-porto.png');
+    }
+  }
+
+  .footer-primary {
+    background-color: $black;
+    min-height: 250px;
+
+    aside {
+      padding: 40px;
+      color: $white;
+      text-align: center;
+
+      &:first-child { text-align: left; }
+      &:last-child { text-align: right; }
+
+      h3 {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: $white;
+    display: inline-block;
+    text-indent: -99999px;
+    margin: 0 15px;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center center;
+
+    &.facebook {
+      background-image: url('./assets/facebook.svg');
+    }
+
+    &.instagram {
+      background-image: url('./assets/instagram.svg');
+    }
+  }
+
+  .input-wrapper {
+    margin-top: 80px;
+    margin-left: 20%;
+
+    input { width: 60%; }
+  }
 </style>
