@@ -38,6 +38,15 @@
           class="social-link instagram"
           title="Instagram"
           target="_blank">instagram</a>
+
+        <div class="control input-wrapper">
+          <input
+            class="input"
+            type="email"
+            placeholder="cadastre seu email">
+
+          <button type="submit" class="button is-primary">ok</button>
+        </div>
       </aside>
 
       <aside class="column is-one-third">
@@ -157,5 +166,12 @@ export default {
     &.instagram {
       background-image: url('./assets/instagram.svg');
     }
+  }
+
+  .input-wrapper {
+    margin-top: 80px;
+    margin-left: 20%;
+
+    input { width: 60%; }
   }
 </style>
