@@ -11,6 +11,7 @@
             <input
               class="input"
               type="text"
+              required
               v-model="form.name"
               placeholder="Nome">
           </p>
@@ -19,6 +20,7 @@
             <input
               class="input"
               type="tel"
+              required
               v-model="form.phone"
               placeholder="Telefone">
           </p>
@@ -27,6 +29,7 @@
             <input
               class="input"
               type="email"
+              required
               v-model="form.email"
               placeholder="Email">
           </p>
@@ -34,6 +37,7 @@
           <p class="control">
             <textarea
               class="textarea"
+              required
               v-model="form.message"
               placeholder="Mensagem">
             </textarea>
@@ -43,10 +47,28 @@
         </form>
       </aside>
     </div>
+
+    <div class="columns">
+      <div class="column">
+        <span
+          class="notification"
+          :class="{
+            'is-success': alert.status == 200,
+            'is-warning': alert.status != 200
+          }"
+          v-if="alert.status">
+            <button class="delete" @click="hideMessage"></button>
+
+            {{alert.message}}
+          </span>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+  let apiUrl = 'https://formspree.io/thulioph@gmail.com';
+
   export default {
     name: 'Contact',
     data() {
@@ -56,12 +78,37 @@
           phone: '',
           email: '',
           message: ''
-        }
+        },
+        alert: ''
       }
     },
     methods: {
       handleSubmit() {
-        console.warn(this.form);
+        this.$http.post(apiUrl, this.form).then(this.success).catch(this.error);
+      },
+
+      success(data) {
+        if (data.status === 200) {
+          this.alert = {
+            status: data.status,
+            message: 'Mensagem enviada com sucesso.'
+          }
+        } else {
+          this.alert = {
+            status: data.status,
+            message: 'Ocorreu um erro no envio da sua mensagem, tente novamente em instantes'
+          }
+        }
+
+        this.form = {};
+      },
+
+      error(err) {
+        return console.error(err);
+      },
+
+      hideMessage() {
+        this.alert = {};
       }
     }
   }
