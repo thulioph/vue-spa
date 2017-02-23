@@ -1,5 +1,37 @@
 <template>
   <header id="home">
+    <div class="prenav is-hidden-mobile">
+      <div class="container">
+        <div class="columns">
+          <div class="nav-left column">
+            <a
+              href="https://fb.com"
+              class="social-link facebook"
+              title="Facebook"
+              target="_blank">
+
+              facebook
+            </a>
+
+            <a
+              href="https://instagram.com"
+              class="social-link instagram"
+              title="Instagram"
+              target="_blank">
+
+              instagram
+            </a>
+          </div>
+
+          <div class="nav-right nav-menu column">
+              <p>
+                R. Nogueira de Souza, 363 - Pina, Recife - PE, 51110-110
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <nav class="nav has-shadow is-fixed">
       <div class="container">
         <div class="nav-left">
@@ -94,11 +126,49 @@
 </script>
 
 <style lang="scss">
+  $yellow: #C79C60;
+
+  .prenav {
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    background-color: $yellow;
+
+    .nav-right {
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .social-link {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+  }
+
   .is-fixed {
     position: fixed;
     z-index: 100;
     width: 100%;
     left: 0;
     top: 0;
+  }
+
+  .nav-item {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $yellow !important;
+
+    transition: border, .25s, ease-in-out;
+
+    &:hover {
+      border-bottom-color: $yellow !important;
+    }
+
+    &.is-active {
+      border-bottom-color: $yellow !important;
+    }
   }
 </style>
