@@ -6,21 +6,37 @@
       </aside>
 
       <aside class="column is-half form-area">
-        <form action="">
+        <form @submit.prevent="handleSubmit">
           <p class="control">
-            <input class="input" type="text" placeholder="Nome">
+            <input
+              class="input"
+              type="text"
+              v-model="form.name"
+              placeholder="Nome">
           </p>
 
           <p class="control">
-            <input class="input" type="tel" placeholder="Telefone">
+            <input
+              class="input"
+              type="tel"
+              v-model="form.phone"
+              placeholder="Telefone">
           </p>
 
           <p class="control">
-            <input class="input" type="email" placeholder="Email">
+            <input
+              class="input"
+              type="email"
+              v-model="form.email"
+              placeholder="Email">
           </p>
 
           <p class="control">
-            <textarea class="textarea" placeholder="Mensagem"></textarea>
+            <textarea
+              class="textarea"
+              v-model="form.message"
+              placeholder="Mensagem">
+            </textarea>
           </p>
 
           <button class="button is-primary" type="submit">Enviar</button>
@@ -32,7 +48,22 @@
 
 <script>
   export default {
-    name: 'Contact'
+    name: 'Contact',
+    data() {
+      return {
+        form: {
+          name: '',
+          phone: '',
+          email: '',
+          message: ''
+        }
+      }
+    },
+    methods: {
+      handleSubmit() {
+        console.warn(this.form);
+      }
+    }
   }
 </script>
 
