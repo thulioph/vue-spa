@@ -76,11 +76,6 @@
 
         // scroll body
         window.scrollTo(0, element);
-      },
-
-      handleScroll (event) {
-        console.warn(event);
-        // this.scrolled = window.scrollY > 0;
       }
     },
     data() {
@@ -90,11 +85,11 @@
       }
     },
     created() {
-      window.addEventListener('scroll', this.handleScroll);
+      // window.addEventListener('scroll', this.handleScroll);
     },
     destroyed() {
-      window.removeEventListener('scroll', this.handleScroll);
-    },
+      // window.removeEventListener('scroll', this.handleScroll);
+    }
   }
 </script>
 
