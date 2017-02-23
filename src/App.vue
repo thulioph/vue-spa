@@ -1,18 +1,24 @@
 <template>
   <div>
-    <main class="app-container columns">
-      <section class="choose-box">
-        <router-link
-          class="choose-btn recife"
-          title="Ir para o site do Pina"
-          to="/recife">Pina - Recife</router-link>
+    <main class="app-container">
+      <section class="choose-box columns">
+        <div class="column">
+          <router-link
+            class="choose-btn recife"
+            title="Ir para o site do Pina"
+            to="/recife">Pina - Recife</router-link>
+        </div>
 
-        <h1>Escolha o seu destino</h1>
+        <div class="column">
+          <h1>Escolha o seu destino</h1>
+        </div>
 
-        <router-link
-          class="choose-btn porto"
-          title="Ir para o site de Porto"
-          to="/porto">Porto de Galinhas</router-link>
+        <div class="column">
+          <router-link
+            class="choose-btn porto"
+            title="Ir para o site de Porto"
+            to="/porto">Porto de Galinhas</router-link>
+        </div>
       </section>
     </main>
 
@@ -76,6 +82,7 @@ export default {
 
   .app-container {
     position: relative;
+    text-align: center;
     min-height: 940px;
     margin-bottom: 0 !important;
     border-bottom: 20px solid $orange;
@@ -88,11 +95,7 @@ export default {
   }
 
   .choose-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -560px;
-    margin-top: -305px;
+    padding: 15% 0 30px 0;
 
     h1 {
       text-transform: uppercase;
@@ -101,8 +104,7 @@ export default {
       text-align: center;
       display: inline-block;
       vertical-align: middle;
-      margin: 0 40px;
-      width: 40%;
+      margin: 90px 40px;
     }
   }
 
