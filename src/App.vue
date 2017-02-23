@@ -137,7 +137,7 @@ export default {
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
-    background-image: url('./assets/bg-index.jpg');
+    background-image: url('./assets/images/bg-index.jpg');
   }
 
   .choose-box {
@@ -169,11 +169,11 @@ export default {
     background-position: center center;
 
     &.recife {
-      background-image: url('./assets/logo-recife.png');
+      background-image: url('./assets/images/logo-recife.png');
     }
 
     &.porto {
-      background-image: url('./assets/logo-porto.png');
+      background-image: url('./assets/images/logo-porto.png');
     }
   }
 
@@ -208,11 +208,11 @@ export default {
     background-position: center center;
 
     &.facebook {
-      background-image: url('./assets/facebook.svg');
+      background-image: url('./assets/icons/facebook.svg');
     }
 
     &.instagram {
-      background-image: url('./assets/instagram.svg');
+      background-image: url('./assets/icons/instagram.svg');
     }
   }
 

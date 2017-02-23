@@ -35,8 +35,8 @@
     <nav class="nav has-shadow is-fixed">
       <div class="container">
         <div class="nav-left">
-          <a href="/" class="nav-item">
-            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+          <a href="/" class="nav-item logo-primary">
+            <img src="../assets/images/logo-recife.png" alt="Caldinho do Neném - Recife">
           </a>
         </div>
 
@@ -127,6 +127,16 @@
 
 <style lang="scss">
   $yellow: #C79C60;
+
+  .logo-primary {
+    width: 110px;
+    height: 110px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 
   .prenav {
     height: 50px;
