@@ -30,7 +30,7 @@
 
 <style lang="scss">
   $yellow: #C79C60;
-  $gray: 292929;
+  $gray: #292929;
 
   section {
     margin-top: 3.5rem; // navbar height
@@ -75,7 +75,7 @@
 
   .sobre-wrapper {
     .slide-container {
-      max-height: 560px;
+      max-height: 690px;
     }
 
     .slide-image {

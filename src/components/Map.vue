@@ -1,28 +1,49 @@
 <template>
   <section>
     <div class="columns">
-      <div class="map-container">
-        <div style="width: 100%; height: 400px">
-          <google-map :center="center" :zoom="12"></google-map>
-        </div>
-      </div>
+      <div id="map" class="map-container"></div>
     </div>
   </section>
 </template>
 
 <script>
-  import { load, Map, Marker } from 'vue-google-maps';
-
-  load('AIzaSyAulRolyPLtvxwTJykxW6aILdohgLOQ-50');
-
   export default {
     name: 'MapApp',
-    components: {
-      'googleMap': Map
+    mounted() {
+      const canvas = document.getElementById("map");
+      const markerImage = 'https://cdn1.iconfinder.com/data/icons/gpsmapicons/blue/gpsmapicons01.png';
+
+      const latLng = new google.maps.LatLng(-8.0873284,-34.8894201);
+      const myOptions = {
+        scrollwheel: false,
+        draggable: true,
+        panControl: false,
+        zoom: 17,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: latLng
+      };
+
+      let map = new google.maps.Map(canvas, myOptions);
+
+      let marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        // icon: markerImage,
+        title: 'Estamos aqui!',
+        animation: google.maps.Animation.DROP
+      });
+
+      let infowindow = new google.maps.InfoWindow({
+        content: `R. Nogueira de Souza, 363, Pina, Recife - PE`,
+        maxWidth: 700
+      });
+
+      infowindow.open(map, marker);
+
+      google.maps.event.addListener(marker, 'click', () => infowindow.open(map, marker));
     },
     data() {
       return {
-        center: { lat: -16.4902128, lng: -39.0915235 }
       }
     }
   }
