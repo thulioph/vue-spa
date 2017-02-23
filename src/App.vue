@@ -49,9 +49,20 @@
           <input
             class="input"
             type="email"
+            v-model="form.email"
+            required
             placeholder="cadastre seu email">
 
-          <button type="submit" class="button is-primary">ok</button>
+          <button
+            type="submit"
+            @click="receiveEmail"
+            class="button is-primary">ok</button>
+        </div>
+
+        <div class="control">
+          <div v-if="alert.message" class="notification is-info">
+            {{alert.message}}
+          </div>
         </div>
       </aside>
 
@@ -65,11 +76,46 @@
 </template>
 
 <script>
+let apiUrl = 'https://formspree.io/thulioph@gmail.com';
+
 export default {
   name: 'app',
+  data() {
+    return {
+      form: { email: '' },
+      alert: {
+        message: ''
+      }
+    }
+  },
   methods: {
     InitApp() {
       localStorage.setItem('App', true);
+    },
+
+    receiveEmail() {
+      if (this.form.email !== '' && typeof this.form.email === 'string') {
+        this.sendEmail(this.form);
+        this.form.email = '';
+      }
+    },
+
+    sendEmail(email) {
+      this.$http.post(apiUrl, email).then(this.success).catch(this.error);
+    },
+
+    success(result) {
+      if (result.status === 200) {
+        this.alert = {
+          message: 'Email cadastrado com sucesso!'
+        }
+
+        setTimeout(() => this.alert.message = '', 5000);
+      }
+    },
+
+    error(err) {
+      console.error(err);
     }
   }
 }
@@ -175,5 +221,10 @@ export default {
     margin-left: 20%;
 
     input { width: 60%; }
+  }
+
+  .notification {
+    text-align: center;
+    margin-top: 20px;
   }
 </style>
