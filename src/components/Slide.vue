@@ -32,7 +32,7 @@
   $yellow: #C79C60;
   $gray: 292929;
 
-  .sobre-section {
+  section {
     margin-top: 3.5rem; // navbar height
   }
 
@@ -80,6 +80,12 @@
 
     .slide-image {
       height: 430px;
+    }
+  }
+
+  .cardapio-wrapper {
+    .slide-image {
+      height: 600px;
     }
   }
 </style>

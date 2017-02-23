@@ -30,15 +30,14 @@
     </cn-slide>
 
     <cn-slide id="cardapio">
-      <h1 slot="title">O Caldinho do Nenem</h1>
-
       <div slot="slide-image">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
+        <slick ref="slick" :options="slickOptions">
+          <img src="./assets/slides/slide-03.jpg" alt="">
+          <img src="./assets/slides/slide-03.jpg" alt="">
+          <img src="./assets/slides/slide-03.jpg" alt="">
+          <img src="./assets/slides/slide-03.jpg" alt="">
+        </slick>
       </div>
-
-      <p slot="content">O Caldinho do Nenen é o refúgio perfeito para quem busca momentos de descontração entre a família ou cercado de amigos, acompanhados sempre do melhor da gastronomia. A casa tem entre suas especialidades os famosos Caldinhos, eleitos pela revista Veja como o melhor da Cidade. Entre as diversas opções do cardápio estão os frutos do mar, preparados com ingredientes frescos, carnes, aves e ótimas opções para petiscos ou refeições. São mais de 20 anos servindo com prazer e atendendo com excelência. A estrutura do Caldinho do Nenen inclui o maior espaço kids da Cidade, amplo estacionamento com manobrista e área climatizada. Comprove a nossa qualidade, vem pro Caldinho do Nenen.</p>
     </cn-slide>
 
     <cn-contact id="contato"></cn-contact>
@@ -143,6 +142,14 @@
       button {
         visibility: hidden;
       }
+    }
+  }
+
+  .my-slide {
+    height: 700px;
+
+    &:first-child {
+      background-color: red;
     }
   }
 </style>
