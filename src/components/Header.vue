@@ -1,6 +1,6 @@
 <template>
-  <header id="home">
-    <div class="prenav is-hidden-mobile">
+  <header id="home" class="is-fixed">
+    <div class="prenav">
       <div class="container">
         <div class="columns">
           <div class="nav-left column">
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <nav class="nav has-shadow is-fixed">
+    <nav class="nav has-shadow">
       <div class="container">
         <div class="nav-left">
           <a href="/" class="nav-item logo-primary">
@@ -98,7 +98,7 @@
     methods: {
       goTo($event) {
         let targetElement = event.target.hash.replace('#', '');
-        let element = document.getElementById(targetElement).offsetTop - 90;
+        let element = document.getElementById(targetElement).offsetTop - 110;
 
         // collapse the navbar
         this.showNavbar = false;
@@ -127,6 +127,7 @@
 
 <style lang="scss">
   $yellow: #C79C60;
+  $white: #FFFFFF;
 
   .logo-primary {
     width: 110px;
@@ -140,15 +141,19 @@
 
   .prenav {
     height: 50px;
-    position: fixed;
     width: 100%;
     z-index: 10;
     top: 0;
     background-color: $yellow;
 
     .nav-right {
-      text-align: center;
-      line-height: 50px;
+      text-align: right;
+
+      p {
+        line-height: 40px;
+        font-weight: bold;
+        color: $white;
+      }
     }
 
     .social-link {
@@ -170,6 +175,7 @@
     text-transform: uppercase;
     font-weight: bold;
     color: $yellow !important;
+    border-size: 4px;
 
     transition: border, .25s, ease-in-out;
 
