@@ -34,12 +34,15 @@
   }
 
   .slide-container {
-    height: 700px;
+    height: auto;
+    max-height: 700px;
     background-color: pink;
     width: 100%;
+    overflow: hidden;
   }
 
   .slide-image {
-    overflow: hidden;
+    height: 100%;
+    position: relative;
   }
 </style>

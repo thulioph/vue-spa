@@ -5,25 +5,9 @@
     <cn-slide>
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <a href="http://placehold.it/800x400">
-            <img src="http://placehold.it/800x400" alt="">
-          </a>
-
-          <a href="http://placehold.it/800x400">
-            <img src="http://placehold.it/800x400" alt="">
-          </a>
-
-          <a href="http://placehold.it/800x400">
-            <img src="http://placehold.it/800x400" alt="">
-          </a>
-
-          <a href="http://placehold.it/800x400">
-            <img src="http://placehold.it/800x400" alt="">
-          </a>
-
-          <a href="http://placehold.it/800x400">
-            <img src="http://placehold.it/800x400" alt="">
-          </a>
+          <img src="./assets/slides/slide-01.jpg" alt="">
+          <img src="./assets/slides/slide-01.jpg" alt="">
+          <img src="./assets/slides/slide-01.jpg" alt="">
         </slick>
       </div>
     </cn-slide>
@@ -86,13 +70,73 @@
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-          infinite: true,
-          speed: 300,
-          centerMode: true
+          speed: 300
         }
       }
     }
   }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  $white: #FFFFFF;
+  $black: #000000;
+
+  .slick-arrow {
+    position: absolute;
+    z-index: 20;
+    top: 42%;
+    width: 50px;
+    height: 50px;
+    background-color: $white;
+    text-indent: -9999px;
+    cursor: pointer;
+    opacity: .6;
+
+    transition: opacity, .25s, linear;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .slick-prev {
+    left: 5%;
+  }
+
+  .slick-next {
+    right: 5%;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      text-indent: -999px;
+      background: $white;
+      opacity: .6;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.slick-active {
+        opacity: 1;
+      }
+
+      button {
+        visibility: hidden;
+      }
+    }
+  }
+</style>
