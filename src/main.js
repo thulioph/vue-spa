@@ -1,13 +1,19 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 
 import App from './App.vue';
 import AppRecife from './Recife.vue';
 import AppPorto from './Porto.vue';
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
 const routes = [
+  {
+    path: '/',
+    component: App
+  },
   {
     path: '/recife',
     component: AppRecife
@@ -26,5 +32,5 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  components: { App }
 })

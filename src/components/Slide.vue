@@ -1,15 +1,15 @@
 <template>
-  <section class="sobre-section">
+  <section>
     <aside class="slide-container">
       <slot name="title"></slot>
 
       <div>
-        <div class="slide-image">
-          <slot name="slide-image"></slot>
+        <div class="slide-header cursive">
+          <slot name="slide-title"></slot>
         </div>
 
-        <div class="slide-header">
-          <slot name="slide-title"></slot>
+        <div class="slide-image">
+          <slot name="slide-image"></slot>
         </div>
 
         <div class="slide-content">
@@ -29,17 +29,63 @@
 </script>
 
 <style lang="scss">
-  .sobre-section {
+  $yellow: #C79C60;
+  $gray: #292929;
+
+  section {
     margin-top: 3.5rem; // navbar height
   }
 
+  .slide-header {
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      margin-bottom: 25px;
+      color: $yellow;
+    }
+  }
+
   .slide-container {
-    height: 700px;
-    background-color: pink;
+    height: auto;
+    max-height: 700px;
     width: 100%;
+    overflow: hidden;
   }
 
   .slide-image {
+    max-height: 700px;
+    height: auto;
     overflow: hidden;
+    position: relative;
+  }
+
+  .slide-content {
+    font-size: 15px;
+    color: $gray;
+    text-align: center;
+
+    p {
+      margin: 50px 0;
+    }
+
+    &:not(p) {
+      margin: 0;
+    }
+  }
+
+  .sobre-wrapper {
+    .slide-container {
+      max-height: 690px;
+    }
+
+    .slide-image {
+      max-height: 430px;
+    }
+  }
+
+  .cardapio-wrapper {
+    .slide-image {
+      height: 600px;
+    }
   }
 </style>
