@@ -4,7 +4,7 @@
       <slot name="title"></slot>
 
       <div>
-        <div class="slide-header">
+        <div class="slide-header cursive">
           <slot name="slide-title"></slot>
         </div>
 
