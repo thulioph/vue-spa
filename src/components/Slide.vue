@@ -1,5 +1,5 @@
 <template>
-  <section class="sobre-section">
+  <section>
     <aside class="slide-container">
       <slot name="title"></slot>
 
@@ -47,14 +47,14 @@
 
   .slide-container {
     height: auto;
-    min-height: 700px;
-    background-color: pink;
+    max-height: 700px;
     width: 100%;
     overflow: hidden;
   }
 
   .slide-image {
-    height: 700px;
+    max-height: 700px;
+    height: auto;
     overflow: hidden;
     position: relative;
   }
@@ -75,11 +75,11 @@
 
   .sobre-wrapper {
     .slide-container {
-      min-height: 560px;
+      max-height: 560px;
     }
 
     .slide-image {
-      height: 430px;
+      max-height: 430px;
     }
   }
 

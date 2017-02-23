@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <div class="map-container">
-      <h1>Mapa aqui!</h1>
+  <section>
+    <div class="columns">
+      <div class="map-container">
+        <h1>Mapa aqui!</h1>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
