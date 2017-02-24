@@ -8,11 +8,46 @@
 
         <div class="column">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">O Caldinho</a></li>
-            <li><a href="#">Cardápio</a></li>
-            <li><a href="#">Caldinho 360º </a></li>
-            <li><a href="#">Contato</a></li>
+            <li>
+              <a
+                href="#home"
+                @click.prevent="goTo($event)">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#sobre"
+                @click.prevent="goTo($event)">
+                O Caldinho
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#cardapio"
+                @click.prevent="goTo($event)">
+                Cardápio
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#caldinho360"
+                @click.prevent="goTo($event)">
+                Caldinho 360º
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#contato"
+                @click.prevent="goTo($event)">
+                Contato
+              </a>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -22,7 +57,22 @@
 
 <script>
   export default {
-    name: 'Footer'
+    name: 'Footer',
+    methods: {
+      goTo($event) {
+        let targetElement = event.target.hash.replace('#', '');
+        let element = document.getElementById(targetElement).offsetTop - 110;
+
+        // collapse the navbar
+        this.showNavbar = false;
+
+        // active the clicked element
+        this.active = targetElement;
+
+        // scroll body
+        window.scrollTo(0, element);
+      }
+    }
   }
 </script>
 
