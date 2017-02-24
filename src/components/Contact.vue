@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="container">
     <div class="columns">
       <aside class="column is-half address-area">
         <h1>Alo alo</h1>

@@ -31,6 +31,9 @@
 <style lang="scss">
   $yellow: #C79C60;
   $gray: #292929;
+  $white: #FFFFFF;
+  $black: #000000;
+
 
   section {
     margin-top: 3.5rem; // navbar height
@@ -65,7 +68,7 @@
     text-align: center;
 
     p {
-      margin: 50px 0;
+      margin-top: 50px;
     }
 
     &:not(p) {
@@ -73,9 +76,13 @@
     }
   }
 
+  //
+  // Different styles per page
+  //
+
   .sobre-wrapper {
     .slide-container {
-      max-height: 690px;
+      max-height: 100%;
     }
 
     .slide-image {
@@ -83,9 +90,79 @@
     }
   }
 
-  .cardapio-wrapper {
-    .slide-image {
-      height: 600px;
+  .contato-wrapper {
+    .columns {
+      &:first-child {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  //
+  // Adjusts on slick carousel
+  //
+
+  .slick-arrow {
+    position: absolute;
+    z-index: 20;
+    top: 42%;
+    width: 50px;
+    height: 50px;
+    background-color: $white;
+    text-indent: -9999px;
+    cursor: pointer;
+    opacity: .6;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    transition: opacity, .25s, linear;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .slick-prev {
+    left: 5%;
+    transform: rotate(180deg);
+    background-image: url('../assets/icons/arrow.svg');
+  }
+
+  .slick-next {
+    right: 5%;
+    background-image: url('../assets/icons/arrow.svg');
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      text-indent: -999px;
+      background: $white;
+      opacity: .6;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.slick-active {
+        opacity: 1;
+      }
+
+      button {
+        visibility: hidden;
+      }
     }
   }
 </style>
