@@ -24,9 +24,7 @@
           </div>
 
           <div class="nav-right nav-menu column">
-              <p>
-                R. Nogueira de Souza, 363 - Pina, Recife - PE, 51110-110
-              </p>
+              <p>{{address}}</p>
           </div>
         </div>
       </div>
@@ -36,7 +34,15 @@
       <div class="container">
         <div class="nav-left">
           <a href="/" class="nav-item logo-primary">
-            <img src="../assets/images/logo-recife.png" alt="Caldinho do Neném - Recife">
+            <img
+              v-if="logo == 'recife'"
+              src="../../src/assets/images/logo-recife.png"
+              alt="Caldinho do Neném - Pina - Recife">
+
+            <img
+              v-if="logo == 'porto'"
+              src="../../src/assets/images/logo-porto.png"
+              alt="Caldinho do Neném - Porto de Galinhas">
           </a>
         </div>
 
@@ -95,6 +101,9 @@
 <script>
   export default {
     name: 'Header',
+
+    props: ['address', 'logo'],
+
     methods: {
       goTo($event) {
         let targetElement = event.target.hash.replace('#', '');
@@ -110,15 +119,18 @@
         window.scrollTo(0, element);
       }
     },
+
     data() {
       return {
         active: 'home',
         showNavbar: false
       }
     },
+
     created() {
       // window.addEventListener('scroll', this.handleScroll);
     },
+
     destroyed() {
       // wigdow.removeEventListener('scroll', this.handleScroll);
     }

@@ -23,8 +23,25 @@
 </template>
 
 <script>
+  import Slick from 'vue-slick';
+
   export default {
-    name: 'Slide'
+    name: 'Slide',
+
+    components: {
+      Slick
+    },
+
+    data() {
+      return {
+        slickOptions: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          speed: 300
+        }
+      }
+    }
   }
 </script>
 
@@ -89,21 +106,13 @@
     }
   }
 
-  .contato-wrapper {
-    .columns {
-      &:first-child {
-        margin-top: 40px;
-      }
-    }
-  }
-
   //
   // Adjusts on slick carousel
   //
 
   .slick-arrow {
     position: absolute;
-    z-index: 6000;
+    z-index: 10;
     top: 42%;
     width: 50px;
     height: 50px;
