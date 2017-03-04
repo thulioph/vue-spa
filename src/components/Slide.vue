@@ -34,7 +34,6 @@
   $white: #FFFFFF;
   $black: #000000;
 
-
   section {
     margin-top: 3.5rem; // navbar height
   }
@@ -104,7 +103,7 @@
 
   .slick-arrow {
     position: absolute;
-    z-index: 20;
+    z-index: 6000;
     top: 42%;
     width: 50px;
     height: 50px;

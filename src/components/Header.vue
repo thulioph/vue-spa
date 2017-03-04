@@ -120,7 +120,7 @@
       // window.addEventListener('scroll', this.handleScroll);
     },
     destroyed() {
-      // window.removeEventListener('scroll', this.handleScroll);
+      // wigdow.removeEventListener('scroll', this.handleScroll);
     }
   }
 </script>
