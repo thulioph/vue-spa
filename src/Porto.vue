@@ -4,34 +4,43 @@
 
     <cn-slide>
       <div slot="slide-image">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
+        <slick ref="slick" :options="slickOptions">
+          <img src="./assets/slides/slide-01.jpg" alt="">
+          <img src="./assets/slides/slide-01.jpg" alt="">
+          <img src="./assets/slides/slide-01.jpg" alt="">
+        </slick>
       </div>
     </cn-slide>
 
-    <cn-slide id="sobre">
+    <cn-slide id="sobre" class="sobre-wrapper">
       <h1 slot="slide-title">O Caldinho do Nenem</h1>
 
       <div slot="slide-image">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
+        <slick ref="slick" :options="slickOptions">
+          <img src="./assets/slides/slide-02.jpg" alt="">
+          <img src="./assets/slides/slide-02.jpg" alt="">
+          <img src="./assets/slides/slide-02.jpg" alt="">
+        </slick>
       </div>
 
-      <p slot="slide-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor minima tempore, corporis nam odit nostrum aliquam, dolorum excepturi quo pariatur.</p>
+      <p class="container" slot="slide-content">
+        O Caldinho do Nenen é o refúgio perfeito para quem busca momentos de descontração entre a família ou cercado de amigos, acompanhados sempre do melhor da gastronomia. A casa tem entre suas especialidades os famosos Caldinhos, eleitos pela revista Veja como o melhor da Cidade. Entre as diversas opções do cardápio estão os frutos do mar, preparados com ingredientes frescos, carnes, aves e ótimas opções para petiscos ou refeições. São mais de 20 anos servindo com prazer e atendendo com excelência. <br>
+        A estrutura do Caldinho do Nenen inclui o maior espaço kids da Cidade, amplo estacionamento com manobrista e área climatizada. Comprove a nossa qualidade, vem pro Caldinho do Nenen.
+      </p>
     </cn-slide>
 
-    <cn-slide id="cardapio">
-      <h1 slot="title">O Caldinho do Nenem</h1>
-
+    <cn-slide id="cardapio" class="cardapio-wrapper">
       <div slot="slide-image">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
-        <img src="./assets/logo.png" height="200" width="200" alt="">
+        <slick ref="slick" :options="slickOptions">
+          <img src="./assets/slides/slide-03.jpg" alt="">
+          <img src="./assets/slides/slide-03.jpg" alt="">
+          <img src="./assets/slides/slide-03.jpg" alt="">
+          <img src="./assets/slides/slide-03.jpg" alt="">
+        </slick>
       </div>
-
-      <p slot="content">O Caldinho do Nenen é o refúgio perfeito para quem busca momentos de descontração entre a família ou cercado de amigos, acompanhados sempre do melhor da gastronomia. A casa tem entre suas especialidades os famosos Caldinhos, eleitos pela revista Veja como o melhor da Cidade. Entre as diversas opções do cardápio estão os frutos do mar, preparados com ingredientes frescos, carnes, aves e ótimas opções para petiscos ou refeições. São mais de 20 anos servindo com prazer e atendendo com excelência. A estrutura do Caldinho do Nenen inclui o maior espaço kids da Cidade, amplo estacionamento com manobrista e área climatizada. Comprove a nossa qualidade, vem pro Caldinho do Nenen.</p>
     </cn-slide>
 
-    <cn-contact id="contato"></cn-contact>
+    <cn-contact id="contato" class="contato-wrapper"></cn-contact>
 
     <cn-map></cn-map>
 
@@ -40,22 +49,45 @@
 </template>
 
 <script>
+  // Components
   import cnHeader from './components/Header.vue';
   import cnSlide from './components/Slide.vue';
   import cnContact from './components/Contact.vue';
   import cnMap from './components/Map.vue';
   import cnFooter from './components/Footer.vue';
 
+  // Libs
+  import Slick from 'vue-slick';
+
   export default {
     name: 'AppPorto',
     components: {
+      Slick,
       cnHeader,
       cnSlide,
       cnContact,
       cnMap,
       cnFooter
+    },
+    data() {
+      return {
+        slickOptions: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          speed: 300
+        }
+      }
     }
   }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .my-slide {
+    height: 700px;
+
+    &:first-child {
+      background-color: red;
+    }
+  }
+</style>
