@@ -17,7 +17,15 @@
           </li>
 
           <li class="logo">
-            <img src="../assets/images/logo-recife.png" height="216" width="231" alt="">
+            <img
+              v-if="logo == 'recife'"
+              src="../../src/assets/images/logo-recife.png"
+              alt="Caldinho do Neném - Pina - Recife">
+
+            <img
+              v-if="logo == 'porto'"
+              src="../../src/assets/images/logo-porto.png"
+              alt="Caldinho do Neném - Porto de Galinhas">
           </li>
 
           <li class="social">
@@ -101,6 +109,9 @@
 
   export default {
     name: 'Contact',
+
+    props: ['logo'],
+
     data() {
       return {
         form: {
@@ -112,6 +123,7 @@
         alert: ''
       }
     },
+
     methods: {
       handleSubmit() {
         this.$http.post(apiUrl, this.form).then(this.success).catch(this.error);

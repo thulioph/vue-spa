@@ -34,7 +34,15 @@
       <div class="container">
         <div class="nav-left">
           <a href="/" class="nav-item logo-primary">
-            <img src="../assets/images/logo-recife.png" alt="Caldinho do Neném - Recife">
+            <img
+              v-if="logo == 'recife'"
+              src="../../src/assets/images/logo-recife.png"
+              alt="Caldinho do Neném - Pina - Recife">
+
+            <img
+              v-if="logo == 'porto'"
+              src="../../src/assets/images/logo-porto.png"
+              alt="Caldinho do Neném - Porto de Galinhas">
           </a>
         </div>
 
@@ -94,7 +102,7 @@
   export default {
     name: 'Header',
 
-    props: ['address'],
+    props: ['address', 'logo'],
 
     methods: {
       goTo($event) {
