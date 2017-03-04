@@ -81,7 +81,12 @@
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-          speed: 300
+          autoplay: true,
+          autoplaySpeed: 6000,
+          infinite: true,
+          rtl: true,
+          mobileFirst: true,
+          slide: '.imgs'
         }
       }
     }
