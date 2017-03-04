@@ -112,7 +112,7 @@
 
   .slick-arrow {
     position: absolute;
-    z-index: 6000;
+    z-index: 10;
     top: 42%;
     width: 50px;
     height: 50px;
