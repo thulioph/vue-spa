@@ -24,9 +24,7 @@
           </div>
 
           <div class="nav-right nav-menu column">
-              <p>
-                R. Nogueira de Souza, 363 - Pina, Recife - PE, 51110-110
-              </p>
+              <p>{{address}}</p>
           </div>
         </div>
       </div>
@@ -95,6 +93,9 @@
 <script>
   export default {
     name: 'Header',
+
+    props: ['address'],
+
     methods: {
       goTo($event) {
         let targetElement = event.target.hash.replace('#', '');
@@ -110,15 +111,18 @@
         window.scrollTo(0, element);
       }
     },
+
     data() {
       return {
         active: 'home',
         showNavbar: false
       }
     },
+
     created() {
       // window.addEventListener('scroll', this.handleScroll);
     },
+
     destroyed() {
       // wigdow.removeEventListener('scroll', this.handleScroll);
     }

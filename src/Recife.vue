@@ -1,6 +1,9 @@
 <template>
   <div>
-    <cn-header id="home"></cn-header>
+    <cn-header
+      :address="map.address"
+      id="home">
+    </cn-header>
 
     <cn-slide>
       <div slot="slide-image">
