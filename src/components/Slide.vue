@@ -23,8 +23,25 @@
 </template>
 
 <script>
+  import Slick from 'vue-slick';
+
   export default {
-    name: 'Slide'
+    name: 'Slide',
+
+    components: {
+      Slick
+    },
+
+    data() {
+      return {
+        slickOptions: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          speed: 300
+        }
+      }
+    }
   }
 </script>
 
@@ -86,14 +103,6 @@
 
     .slide-image {
       max-height: 430px;
-    }
-  }
-
-  .contato-wrapper {
-    .columns {
-      &:first-child {
-        margin-top: 40px;
-      }
     }
   }
 

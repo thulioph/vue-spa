@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container contato-wrapper">
     <div class="columns">
       <aside class="column is-half address-area">
         <h4>Endereços</h4>
@@ -148,6 +148,8 @@
   $yellow: #C79C60;
   $black: #000000;
 
+  // ====
+
   @mixin before($url) {
     &:after {
       content: '';
@@ -163,6 +165,16 @@
       background-size: 60%;
       background-position: center center;
       background-image: url($url);
+    }
+  }
+
+  // ====
+
+  .contato-wrapper {
+    .columns {
+      &:first-child {
+        margin-top: 40px;
+      }
     }
   }
 

@@ -54,6 +54,7 @@
   import cnSlide from './components/Slide.vue';
   import cnContact from './components/Contact.vue';
   import cnMap from './components/Map.vue';
+  import cnTour from './components/Tour.vue';
   import cnFooter from './components/Footer.vue';
 
   // Libs
@@ -67,6 +68,7 @@
       cnSlide,
       cnContact,
       cnMap,
+      cnTour,
       cnFooter
     },
     data() {

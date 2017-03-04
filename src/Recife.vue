@@ -43,7 +43,7 @@
       </div>
     </cn-slide>
 
-    <cn-contact id="contato" class="contato-wrapper"></cn-contact>
+    <cn-contact id="contato"></cn-contact>
 
     <cn-map></cn-map>
 
@@ -79,7 +79,8 @@
         slickOptions: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true
+          dots: true,
+          speed: 300
         }
       }
     }
@@ -87,25 +88,4 @@
 </script>
 
 <style lang="scss">
-  .my-slide {
-    height: 700px;
-
-    &:first-child {
-      background-color: red;
-    }
-  }
-
-  .imgs {
-    height: 200px;
-  }
-
-  .img-01 {
-    height: auto;
-    background-color: red;
-  }
-
-  .img-02 {
-    height: auto;
-    background-color: orange;
-  }
 </style>
