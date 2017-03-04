@@ -39,7 +39,6 @@
           <img src="./assets/slides/slide-03.jpg" alt="">
           <img src="./assets/slides/slide-03.jpg" alt="">
           <img src="./assets/slides/slide-03.jpg" alt="">
-          <img src="./assets/slides/slide-03.jpg" alt="">
         </slick>
       </div>
     </cn-slide>
@@ -80,13 +79,7 @@
         slickOptions: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
-          autoplay: true,
-          autoplaySpeed: 6000,
-          infinite: true,
-          rtl: true,
-          mobileFirst: true,
-          slide: '.imgs'
+          dots: true
         }
       }
     }
@@ -100,5 +93,19 @@
     &:first-child {
       background-color: red;
     }
+  }
+
+  .imgs {
+    height: 200px;
+  }
+
+  .img-01 {
+    height: auto;
+    background-color: red;
+  }
+
+  .img-02 {
+    height: auto;
+    background-color: orange;
   }
 </style>
