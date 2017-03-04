@@ -259,7 +259,8 @@
       }
 
       &.social {
-        text-align: center;
+        text-align: left;
+        margin-left: 15%;
 
         a {
           background-color: $yellow;
@@ -272,5 +273,4 @@
       color: $yellow;
     }
   }
-
 </style>
