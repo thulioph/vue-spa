@@ -34,7 +34,6 @@
   $white: #FFFFFF;
   $black: #000000;
 
-
   section {
     margin-top: 3.5rem; // navbar height
   }

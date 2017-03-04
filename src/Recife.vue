@@ -29,7 +29,11 @@
       </p>
     </cn-slide>
 
-    <cn-slide id="cardapio" class="cardapio-wrapper">
+    <cn-tour id="caldinho360">
+      <h1 slot="tour-title">Caldinho 360º</h1>
+    </cn-tour>
+
+    <cn-slide id="cardapio">
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
           <img src="./assets/slides/slide-03.jpg" alt="">
@@ -54,6 +58,7 @@
   import cnSlide from './components/Slide.vue';
   import cnContact from './components/Contact.vue';
   import cnMap from './components/Map.vue';
+  import cnTour from './components/Tour.vue';
   import cnFooter from './components/Footer.vue';
 
   // Libs
@@ -67,6 +72,7 @@
       cnSlide,
       cnContact,
       cnMap,
+      cnTour,
       cnFooter
     },
     data() {
