@@ -7,43 +7,45 @@
 
       <aside class="column is-half form-area">
         <form @submit.prevent="handleSubmit">
-          <p class="control">
+          <div class="control">
             <input
               class="input"
               type="text"
               required
               v-model="form.name"
               placeholder="Nome">
-          </p>
+          </div>
 
-          <p class="control">
+          <div class="control">
             <input
               class="input"
               type="tel"
               required
               v-model="form.phone"
               placeholder="Telefone">
-          </p>
+          </div>
 
-          <p class="control">
+          <div class="control">
             <input
               class="input"
               type="email"
               required
               v-model="form.email"
               placeholder="Email">
-          </p>
+          </div>
 
-          <p class="control">
+          <div class="control">
             <textarea
               class="textarea"
               required
               v-model="form.message"
               placeholder="Mensagem">
             </textarea>
-          </p>
+          </div>
 
-          <button class="button is-primary" type="submit">Enviar</button>
+          <div class="control">
+            <button class="button is-primary btn-submit" type="submit">Enviar</button>
+          </div>
         </form>
       </aside>
     </div>
@@ -114,4 +116,44 @@
   }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  $yellow: #C79C60;
+  $black: #000000;
+
+  .control {
+    margin-bottom: 0 !important;
+  }
+
+  .input {
+    height: 3.285em;
+    border-radius: 0;
+    border-color: $yellow;
+    color: $yellow;
+
+    &:active, &:focus, &:hover {
+      border-color: $black;
+    }
+  }
+
+  .textarea {
+    border-color: $yellow;
+    color: $yellow;
+
+    &:active, &:focus, &:hover {
+      border-color: $black;
+    }
+  }
+
+  .btn-submit {
+    float: right;
+    margin-top: 10px;
+    background-color: transparent !important;
+    color: $yellow !important;
+
+    &:hover {
+      background-color: $yellow !important;
+      color: $black !important;
+    }
+  }
+
+</style>
