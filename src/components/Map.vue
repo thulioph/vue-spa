@@ -9,11 +9,13 @@
 <script>
   export default {
     name: 'MapApp',
+
+    props: ['coords', 'address'],
+
     mounted() {
       const canvas = document.getElementById("map");
-      const markerImage = 'https://cdn1.iconfinder.com/data/icons/gpsmapicons/blue/gpsmapicons01.png';
 
-      const latLng = new google.maps.LatLng(-8.0873284,-34.8894201);
+      const latLng = new google.maps.LatLng(this.coords[0], this.coords[1]);
       const myOptions = {
         scrollwheel: false,
         draggable: true,
@@ -28,13 +30,12 @@
       let marker = new google.maps.Marker({
         position: latLng,
         map: map,
-        // icon: markerImage,
         title: 'Estamos aqui!',
         animation: google.maps.Animation.DROP
       });
 
       let infowindow = new google.maps.InfoWindow({
-        content: `R. Nogueira de Souza, 363, Pina, Recife - PE`,
+        content: this.address,
         maxWidth: 700
       });
 
@@ -42,6 +43,7 @@
 
       google.maps.event.addListener(marker, 'click', () => infowindow.open(map, marker));
     },
+
     data() {
       return {
       }

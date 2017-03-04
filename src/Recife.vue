@@ -45,7 +45,10 @@
 
     <cn-contact id="contato"></cn-contact>
 
-    <cn-map></cn-map>
+    <cn-map
+      :coords="map.coords"
+      :address="map.address">
+    </cn-map>
 
     <cn-footer></cn-footer>
   </div>
@@ -81,6 +84,10 @@
           slidesToScroll: 1,
           dots: true,
           speed: 300
+        },
+        map: {
+          coords: [-8.0873686,-34.8893834],
+          address: 'R. Nogueira de Souza, 363 Pina, Recife - PE'
         },
         tourLink: 'https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1488653066162!6m8!1m7!1sLk41C_cpD-8AAAQvxYOsKA!2m2!1d-8.087368571040457!2d-34.88938342633912!3f175.72!4f-5.5!5f0.7820865974627469'
       }
