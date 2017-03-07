@@ -179,7 +179,6 @@
   .porto {
     .contato-wrapper {
       background-repeat: no-repeat;
-      background-position: center -50px;
       background-size: cover;
       background-color: transparent;
       background-image: url('../assets/images/porto-header.jpg');
