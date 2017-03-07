@@ -1,10 +1,3 @@
 language: node_js
 node_js:
 - '6'
-deploy:
-  provider: heroku
-  on: master
-  api_key:
-    secure: ZUgji4X6KfMEY8KRRFFUUl6eQPA7DWbGZbx8plf01pWI+d/lbnCAm/azxagxXh0wP5jUfiv62zwYwObmX4D3RDkJiPHCF0AZWk1hAzCRzYI1dF3+7YjnCON27kXg1UHWImGnBWpCx3bnmqkrHU80KvWXtTM1LN+lmLwdiKHAj/IFclnihbmGBW8x0ekintFsDMs9+8JpWNcsZmIqx1wiRu0XeJoQhGNRWe6CoIezzHQGlpmocJQKeY5S6cUPomN/r4dNA4+OLlB9W79aBipqnzTLPMEfsUDqR2REUXmLhTXSV9N0Qw9haI6x+IdogjLB8mFzFwh0XzpwjiHLG8Obz6/WRnPPWIB5BZxVFwOhbPH4Bzem4IaxeOWGe66DTCHj39FAA/6oZn5Uz+U2DyvaYjyIRe7RnQ9q7FQpIgaEVKIDsUlpNCq4AG9+3umt1URzRn8TzzBCiraUfJQVDoov7lnHTA1vrpAlVAAoLofDrUzVYo+PYOdxh4Adw/ZSwWXif0wRT1po/6CQO/dM68PNaPidRIiaW3aHe/s01PKMhN1ZdR+XxNtUabQMHaUwAv8EixtQpk16MMPkqddaB3bhypV0KqhnY9MU/SpM+QZZyVvmKn1TVTerR0CZGhP5HLbqRlSHQ3hoWmLyDLBh9f7KDijc/NExl+rpLGaURSgBT8E=
-    run:
-      - restart
