@@ -138,8 +138,7 @@
 </script>
 
 <style lang="scss">
-  $yellow: #C79C60;
-  $white: #FFFFFF;
+  @import '../assets/scss/base.scss';
 
   .logo-primary {
     width: 110px;

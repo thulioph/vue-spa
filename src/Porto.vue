@@ -106,12 +106,5 @@
   }
 </script>
 
-<style lang="scss">
-  .my-slide {
-    height: 700px;
-
-    &:first-child {
-      background-color: red;
-    }
-  }
+<style lang="scss" scoped>
 </style>

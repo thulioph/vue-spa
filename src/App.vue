@@ -76,55 +76,53 @@
 </template>
 
 <script>
-let apiUrl = 'https://formspree.io/thulioph@gmail.com';
+  let apiUrl = 'https://formspree.io/thulioph@gmail.com';
 
-export default {
-  name: 'app',
-  data() {
-    return {
-      form: { email: '' },
-      alert: {
-        message: ''
-      }
-    }
-  },
-  methods: {
-    InitApp() {
-      localStorage.setItem('App', true);
-    },
-
-    receiveEmail() {
-      if (this.form.email !== '' && typeof this.form.email === 'string') {
-        this.sendEmail(this.form);
-        this.form.email = '';
-      }
-    },
-
-    sendEmail(email) {
-      this.$http.post(apiUrl, email).then(this.success).catch(this.error);
-    },
-
-    success(result) {
-      if (result.status === 200) {
-        this.alert = {
-          message: 'Email cadastrado com sucesso!'
+  export default {
+    name: 'app',
+    data() {
+      return {
+        form: { email: '' },
+        alert: {
+          message: ''
         }
-
-        setTimeout(() => this.alert.message = '', 5000);
       }
     },
+    methods: {
+      InitApp() {
+        localStorage.setItem('App', true);
+      },
 
-    error(err) {
-      console.error(err);
+      receiveEmail() {
+        if (this.form.email !== '' && typeof this.form.email === 'string') {
+          this.sendEmail(this.form);
+          this.form.email = '';
+        }
+      },
+
+      sendEmail(email) {
+        this.$http.post(apiUrl, email).then(this.success).catch(this.error);
+      },
+
+      success(result) {
+        if (result.status === 200) {
+          this.alert = {
+            message: 'Email cadastrado com sucesso!'
+          }
+
+          setTimeout(() => this.alert.message = '', 5000);
+        }
+      },
+
+      error(err) {
+        console.error(err);
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">
-  $orange: #E1B725;
-  $black: #282828;
-  $white: #FFFFFF;
+  @import './assets/scss/base.scss';
 
   .app-container {
     position: relative;
