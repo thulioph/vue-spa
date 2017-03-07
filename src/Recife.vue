@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="pageClass">
     <cn-header
       :address="map.address"
       :logo="logo"
@@ -75,6 +75,7 @@
 
   export default {
     name: 'AppRecife',
+
     components: {
       Slick,
       cnHeader,
@@ -84,6 +85,7 @@
       cnTour,
       cnFooter
     },
+
     data() {
       return {
         slickOptions: {
@@ -97,10 +99,21 @@
           address: 'R. Nogueira de Souza, 363 Pina, Recife - PE'
         },
         logo: 'recife',
-        tourLink: 'https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1488653066162!6m8!1m7!1sLk41C_cpD-8AAAQvxYOsKA!2m2!1d-8.087368571040457!2d-34.88938342633912!3f175.72!4f-5.5!5f0.7820865974627469'
+        tourLink: 'https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1488653066162!6m8!1m7!1sLk41C_cpD-8AAAQvxYOsKA!2m2!1d-8.087368571040457!2d-34.88938342633912!3f175.72!4f-5.5!5f0.7820865974627469',
+        pageClass: ''
+      }
+    },
+
+    mounted() {
+      if (this.$route.name && this.$route.name === 'recife') {
+        this.pageClass = this.$route.name;
       }
     }
   }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+  // .recife {
+  //   $yellow: #C79C60;
+  // }
+</style>

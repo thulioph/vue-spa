@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="pageClass">
     <cn-header
       :address="map.address"
       :logo="logo"
@@ -100,7 +100,14 @@
           address: 'Praça das Piscinas Naturais, Galeria Verdes Mares, 1º Andar, Porto de Galinhas'
         },
         logo: 'porto',
-        tourLink: 'https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1488653096719!6m8!1m7!1sOsvJ_e5IwJcAAAQvxYSI9Q!2m2!1d-8.50622452407704!2d-35.00052941787942!3f287.87!4f-11.900000000000006!5f0.7820865974627469'
+        tourLink: 'https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1488653096719!6m8!1m7!1sOsvJ_e5IwJcAAAQvxYSI9Q!2m2!1d-8.50622452407704!2d-35.00052941787942!3f287.87!4f-11.900000000000006!5f0.7820865974627469',
+        pageClass: ''
+      }
+    },
+
+    mounted() {
+      if(this.$route.name && this.$route.name === 'porto') {
+        this.pageClass = this.$route.name;
       }
     }
   }
