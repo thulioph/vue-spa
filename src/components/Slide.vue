@@ -74,9 +74,9 @@
 
   .slide-content {
     font-size: 15px;
-    text-align: center;
 
     p {
+      text-align: center;
       margin-top: 50px;
     }
 
