@@ -138,7 +138,33 @@
 </script>
 
 <style lang="scss">
-  @import '../assets/scss/base.scss';
+  .recife {
+    .prenav {
+      background-color: #C79C60;
+    }
+
+    .nav-item {
+      color: #C79C60 !important;
+
+      &.js-active { border-bottom-color: #C79C60 !important; }
+      &:hover { border-bottom-color: #C79C60 !important; }
+    }
+  }
+
+  .porto {
+    .prenav {
+      background-color: #F9CA0D;
+    }
+
+    .nav-item {
+      color: #C79C60 !important;
+
+      &.js-active { border-bottom-color: #C79C60 !important; }
+      &:hover { border-bottom-color: #C79C60 !important; }
+    }
+  }
+
+  // ====
 
   .logo-primary {
     width: 110px;
@@ -155,7 +181,6 @@
     width: 100%;
     z-index: 10;
     top: 0;
-    background-color: $yellow;
 
     .nav-right {
       text-align: right;
@@ -163,7 +188,7 @@
       p {
         line-height: 40px;
         font-weight: bold;
-        color: $white;
+        color: #FFFFFF;
       }
     }
 
@@ -185,17 +210,7 @@
   .nav-item {
     text-transform: uppercase;
     font-weight: bold;
-    color: $yellow !important;
     border-size: 4px;
-
     transition: border, .25s, ease-in-out;
-
-    &:hover {
-      border-bottom-color: $yellow !important;
-    }
-
-    &.is-active {
-      border-bottom-color: $yellow !important;
-    }
   }
 </style>

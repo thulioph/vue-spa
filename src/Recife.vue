@@ -112,8 +112,4 @@
   }
 </script>
 
-<style lang="scss">
-  // .recife {
-  //   $yellow: #C79C60;
-  // }
-</style>
+<style lang="scss"></style>
