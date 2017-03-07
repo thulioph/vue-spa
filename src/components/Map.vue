@@ -1,9 +1,9 @@
 <template>
-  <section>
+  <div>
     <div class="columns">
       <div id="map" class="map-container"></div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -55,6 +55,5 @@
   .map-container {
     width: 100%;
     height: 410px;
-    background-color: orange;
   }
 </style>

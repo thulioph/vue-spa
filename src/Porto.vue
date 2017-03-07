@@ -123,5 +123,22 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.porto {
+  .nav {
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    background-size: cover;
+    background-color: transparent;
+    background-image: url('./assets/images/porto-header.jpg');
+  }
+
+  .sobre-wrapper {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    background-color: transparent;
+    // background-image: url('./assets/images/porto-header.jpg');
+  }
+}
 </style>

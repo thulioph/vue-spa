@@ -47,7 +47,7 @@
 
 <style lang="scss">
   section {
-    margin-top: 3.5rem; // navbar height
+    padding-top: 3.5rem; // navbar height
   }
 
   .slide-header {
