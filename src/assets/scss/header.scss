@@ -1,0 +1,65 @@
+//
+// Recife
+//
+
+.recife {
+  .prenav {
+    background-color: #C79C60;
+  }
+
+  .nav-item {
+    color: #C79C60 !important;
+
+    &.is-active { border-bottom-color: #C79C60 !important; }
+    &:hover { border-bottom-color: #C79C60 !important; }
+  }
+}
+
+
+//
+// Porto
+//
+
+.porto {
+  .prenav {
+    background-color: #F9CA0D;
+  }
+
+  .nav-item {
+    color: #CB181F !important;
+
+    &.is-active { border-bottom-color: #CB181F !important; }
+    &:hover { border-bottom-color: #CB181F !important; }
+  }
+}
+
+
+//
+// Commons
+//
+
+.app-container {
+  border-bottom-color: #E1B725 !important;
+}
+
+.choose-box {
+  h1 {
+    color: #FFF;
+  }
+}
+
+.choose-btn {
+  color: #FFF;
+}
+
+.social-link {
+  background-color: #FFF;
+}
+
+.footer-primary {
+  background-color: #222222;
+
+  aside {
+    color: #FFF;
+  }
+}

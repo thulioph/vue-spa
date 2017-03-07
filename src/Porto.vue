@@ -38,9 +38,10 @@
     </cn-tour>
 
     <cn-slide id="cardapio">
+      <h1 slot="slide-title">Cardápio</h1>
+
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <img src="./assets/slides/slide-03.jpg" alt="">
           <img src="./assets/slides/slide-03.jpg" alt="">
           <img src="./assets/slides/slide-03.jpg" alt="">
           <img src="./assets/slides/slide-03.jpg" alt="">

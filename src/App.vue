@@ -122,14 +122,17 @@
 </script>
 
 <style lang="scss">
-  @import './assets/scss/base.scss';
+  @import './assets/scss/header.scss';
+  @import './assets/scss/slide.scss';
+  @import './assets/scss/tour.scss';
+  @import './assets/scss/contact.scss';
 
   .app-container {
     position: relative;
     text-align: center;
     min-height: 940px;
     margin-bottom: 0 !important;
-    border-bottom: 20px solid $orange;
+    border-bottom: 20px solid;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -144,7 +147,6 @@
     h1 {
       text-transform: uppercase;
       font-size: 50px;
-      color: $white;
       text-align: center;
       display: inline-block;
       vertical-align: middle;
@@ -158,7 +160,6 @@
     height: 390px;
     display: inline-block;
     text-transform: uppercase;
-    color: $white;
     line-height: 780px;
     vertical-align: middle;
     text-align: center;
@@ -176,12 +177,10 @@
   }
 
   .footer-primary {
-    background-color: $black;
     min-height: 250px;
 
     aside {
       padding: 40px;
-      color: $white;
       text-align: center;
 
       &:first-child { text-align: left; }
@@ -197,7 +196,6 @@
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background-color: $white;
     display: inline-block;
     text-indent: -99999px;
     margin: 0 15px;

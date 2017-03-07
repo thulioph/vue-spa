@@ -172,7 +172,6 @@
       position: absolute;
       top: -4px;
       left: -50px;
-      background-color: $yellow;
       background-repeat: no-repeat;
       background-size: 60%;
       background-position: center center;
@@ -197,34 +196,16 @@
   .input {
     height: 4.285em;
     border-radius: 0;
-    border-color: $yellow;
-    color: $yellow;
-
-    &:active, &:focus, &:hover {
-      border-color: $black;
-    }
   }
 
   .textarea {
-    border-color: $yellow;
-    color: $yellow;
     border-radius: 0 0 3px 3px;
-
-    &:active, &:focus, &:hover {
-      border-color: $black;
-    }
   }
 
   .btn-submit {
     float: right;
     margin-top: 10px;
     background-color: transparent !important;
-    color: $yellow !important;
-
-    &:hover {
-      background-color: $yellow !important;
-      color: $black !important;
-    }
   }
 
   .form-primary {
@@ -233,7 +214,6 @@
     &:before {
       content: attr(data-title);
       display: inline-block;
-      color: $yellow;
       margin-bottom: 5px;
     }
   }
@@ -244,19 +224,17 @@
     h4 {
       font-size: 25px;
       font-weight: bold;
-      color: $yellow;
       margin-bottom: 10px;
     }
 
     li {
       font-size: 16px;
-      color: $yellow;
       margin-bottom: 10px;
       position: relative;
 
       &:first-child,
       &:nth-child(2) {
-        border-bottom: 1px solid $yellow;
+        border-bottom: 1px solid;
         padding-bottom: 10px;
 
         @include before('../assets/icons/marker.svg');
@@ -287,14 +265,9 @@
         margin-left: 15%;
 
         a {
-          background-color: $yellow;
           margin: 0 5px;
         }
       }
-    }
-
-    a {
-      color: $yellow;
     }
   }
 </style>

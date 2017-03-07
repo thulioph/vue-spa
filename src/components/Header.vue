@@ -138,34 +138,6 @@
 </script>
 
 <style lang="scss">
-  .recife {
-    .prenav {
-      background-color: #C79C60;
-    }
-
-    .nav-item {
-      color: #C79C60 !important;
-
-      &.js-active { border-bottom-color: #C79C60 !important; }
-      &:hover { border-bottom-color: #C79C60 !important; }
-    }
-  }
-
-  .porto {
-    .prenav {
-      background-color: #F9CA0D;
-    }
-
-    .nav-item {
-      color: #C79C60 !important;
-
-      &.js-active { border-bottom-color: #C79C60 !important; }
-      &:hover { border-bottom-color: #C79C60 !important; }
-    }
-  }
-
-  // ====
-
   .logo-primary {
     width: 110px;
     height: 110px;
