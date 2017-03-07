@@ -12,14 +12,17 @@ Vue.use(VueResource);
 const routes = [
   {
     path: '/',
+    name: 'app',
     component: App
   },
   {
     path: '/recife',
+    name: 'recife',
     component: AppRecife
   },
   {
     path: '/porto',
+    name: 'porto',
     component: AppPorto
   }
 ];

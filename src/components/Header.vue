@@ -138,9 +138,6 @@
 </script>
 
 <style lang="scss">
-  $yellow: #C79C60;
-  $white: #FFFFFF;
-
   .logo-primary {
     width: 110px;
     height: 110px;
@@ -156,7 +153,6 @@
     width: 100%;
     z-index: 10;
     top: 0;
-    background-color: $yellow;
 
     .nav-right {
       text-align: right;
@@ -164,7 +160,7 @@
       p {
         line-height: 40px;
         font-weight: bold;
-        color: $white;
+        color: #FFFFFF;
       }
     }
 
@@ -186,17 +182,7 @@
   .nav-item {
     text-transform: uppercase;
     font-weight: bold;
-    color: $yellow !important;
     border-size: 4px;
-
     transition: border, .25s, ease-in-out;
-
-    &:hover {
-      border-bottom-color: $yellow !important;
-    }
-
-    &.is-active {
-      border-bottom-color: $yellow !important;
-    }
   }
 </style>

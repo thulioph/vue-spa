@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="pageClass">
     <cn-header
       :address="map.address"
       :logo="logo"
@@ -28,8 +28,17 @@
       </div>
 
       <p class="container" slot="slide-content">
-        O Caldinho do Nenen é o refúgio perfeito para quem busca momentos de descontração entre a família ou cercado de amigos, acompanhados sempre do melhor da gastronomia. A casa tem entre suas especialidades os famosos Caldinhos, eleitos pela revista Veja como o melhor da Cidade. Entre as diversas opções do cardápio estão os frutos do mar, preparados com ingredientes frescos, carnes, aves e ótimas opções para petiscos ou refeições. São mais de 20 anos servindo com prazer e atendendo com excelência. <br>
-        A estrutura do Caldinho do Nenen inclui o maior espaço kids da Cidade, amplo estacionamento com manobrista e área climatizada. Comprove a nossa qualidade, vem pro Caldinho do Nenen.
+        O Caldinho do Nenen é o refúgio perfeito para quem busca momentos de descontração entre a família ou cercado de amigos, acompanhados sempre do melhor da gastronomia. A casa tem entre suas especialidades os famosos Caldinhos, eleitos pela revista Veja como o melhor da Cidade. Entre as diversas opções do cardápio estão os frutos do mar, preparados com ingredientes frescos, carnes, aves e ótimas opções para petiscos ou refeições.
+
+        São mais de 20 anos servindo com prazer e atendendo com excelência.
+
+        <br>
+
+        A estrutura do Caldinho do Nenen inclui o maior espaço kids da Cidade, amplo estacionamento com manobrista e área climatizada.
+
+        <br>
+
+        Comprove a nossa qualidade, vem pro Caldinho do Nenen.
       </p>
     </cn-slide>
 
@@ -38,9 +47,10 @@
     </cn-tour>
 
     <cn-slide id="cardapio">
+      <h1 slot="slide-title">Cardápio</h1>
+
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <img src="./assets/slides/slide-03.jpg" alt="">
           <img src="./assets/slides/slide-03.jpg" alt="">
           <img src="./assets/slides/slide-03.jpg" alt="">
           <img src="./assets/slides/slide-03.jpg" alt="">
@@ -100,18 +110,35 @@
           address: 'Praça das Piscinas Naturais, Galeria Verdes Mares, 1º Andar, Porto de Galinhas'
         },
         logo: 'porto',
-        tourLink: 'https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1488653096719!6m8!1m7!1sOsvJ_e5IwJcAAAQvxYSI9Q!2m2!1d-8.50622452407704!2d-35.00052941787942!3f287.87!4f-11.900000000000006!5f0.7820865974627469'
+        tourLink: 'https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1488653096719!6m8!1m7!1sOsvJ_e5IwJcAAAQvxYSI9Q!2m2!1d-8.50622452407704!2d-35.00052941787942!3f287.87!4f-11.900000000000006!5f0.7820865974627469',
+        pageClass: ''
+      }
+    },
+
+    mounted() {
+      if(this.$route.name && this.$route.name === 'porto') {
+        this.pageClass = this.$route.name;
       }
     }
   }
 </script>
 
 <style lang="scss">
-  .my-slide {
-    height: 700px;
-
-    &:first-child {
-      background-color: red;
-    }
+.porto {
+  .nav {
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    background-size: cover;
+    background-color: transparent;
+    background-image: url('./assets/images/porto-header.jpg');
   }
+
+  .sobre-wrapper {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    background-color: transparent;
+    // background-image: url('./assets/images/porto-header.jpg');
+  }
+}
 </style>

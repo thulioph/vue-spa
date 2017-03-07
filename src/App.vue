@@ -76,62 +76,63 @@
 </template>
 
 <script>
-let apiUrl = 'https://formspree.io/thulioph@gmail.com';
+  let apiUrl = 'https://formspree.io/thulioph@gmail.com';
 
-export default {
-  name: 'app',
-  data() {
-    return {
-      form: { email: '' },
-      alert: {
-        message: ''
-      }
-    }
-  },
-  methods: {
-    InitApp() {
-      localStorage.setItem('App', true);
-    },
-
-    receiveEmail() {
-      if (this.form.email !== '' && typeof this.form.email === 'string') {
-        this.sendEmail(this.form);
-        this.form.email = '';
-      }
-    },
-
-    sendEmail(email) {
-      this.$http.post(apiUrl, email).then(this.success).catch(this.error);
-    },
-
-    success(result) {
-      if (result.status === 200) {
-        this.alert = {
-          message: 'Email cadastrado com sucesso!'
+  export default {
+    name: 'app',
+    data() {
+      return {
+        form: { email: '' },
+        alert: {
+          message: ''
         }
-
-        setTimeout(() => this.alert.message = '', 5000);
       }
     },
+    methods: {
+      InitApp() {
+        localStorage.setItem('App', true);
+      },
 
-    error(err) {
-      console.error(err);
+      receiveEmail() {
+        if (this.form.email !== '' && typeof this.form.email === 'string') {
+          this.sendEmail(this.form);
+          this.form.email = '';
+        }
+      },
+
+      sendEmail(email) {
+        this.$http.post(apiUrl, email).then(this.success).catch(this.error);
+      },
+
+      success(result) {
+        if (result.status === 200) {
+          this.alert = {
+            message: 'Email cadastrado com sucesso!'
+          }
+
+          setTimeout(() => this.alert.message = '', 5000);
+        }
+      },
+
+      error(err) {
+        console.error(err);
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">
-  $orange: #E1B725;
-  $black: #282828;
-  $white: #FFFFFF;
+  @import './assets/scss/header.scss';
+  @import './assets/scss/slide.scss';
+  @import './assets/scss/tour.scss';
+  @import './assets/scss/contact.scss';
 
   .app-container {
     position: relative;
     text-align: center;
     min-height: 940px;
     margin-bottom: 0 !important;
-    border-bottom: 20px solid $orange;
+    border-bottom: 20px solid;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -146,7 +147,6 @@ export default {
     h1 {
       text-transform: uppercase;
       font-size: 50px;
-      color: $white;
       text-align: center;
       display: inline-block;
       vertical-align: middle;
@@ -160,7 +160,6 @@ export default {
     height: 390px;
     display: inline-block;
     text-transform: uppercase;
-    color: $white;
     line-height: 780px;
     vertical-align: middle;
     text-align: center;
@@ -178,12 +177,10 @@ export default {
   }
 
   .footer-primary {
-    background-color: $black;
     min-height: 250px;
 
     aside {
       padding: 40px;
-      color: $white;
       text-align: center;
 
       &:first-child { text-align: left; }
@@ -199,7 +196,6 @@ export default {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background-color: $white;
     display: inline-block;
     text-indent: -99999px;
     margin: 0 15px;

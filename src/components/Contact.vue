@@ -1,104 +1,106 @@
 <template>
-  <section class="container contato-wrapper">
-    <div class="columns">
-      <aside class="column is-half address-area">
-        <h4>Endereços</h4>
+  <section class="contato-wrapper">
+    <div class="container">
+      <div class="columns">
+        <aside class="column is-half address-area">
+          <h4>Endereços</h4>
 
-        <ul>
-          <li>R. Nogueira de Souza, 363 Pina, Recife - PE</li>
-          <li>Praça das Piscinas Naturais, Galeria Verdes Mares, 1º Andar, Porto de Galinhas</li>
+          <ul>
+            <li>R. Nogueira de Souza, 363 Pina, Recife - PE</li>
+            <li>Praça das Piscinas Naturais, Galeria Verdes Mares, 1º Andar, Porto de Galinhas</li>
 
-          <li class="phone">
-            <a href="tel:+558135521962">81 - 3552.1962</a>
-          </li>
+            <li class="phone">
+              <a href="tel:+558135521962">81 - 3552.1962</a>
+            </li>
 
-          <li class="email">
-            <a href="mailto:contato@caldinhodonenem.com.br">contato@caldinhodonenem.com.br</a>
-          </li>
+            <li class="email">
+              <a href="mailto:contato@caldinhodonenem.com.br">contato@caldinhodonenem.com.br</a>
+            </li>
 
-          <li class="logo">
-            <img
-              v-if="logo == 'recife'"
-              src="../../src/assets/images/logo-recife.png"
-              alt="Caldinho do Neném - Pina - Recife">
+            <li class="logo">
+              <img
+                v-if="logo == 'recife'"
+                src="../../src/assets/images/logo-recife.png"
+                alt="Caldinho do Neném - Pina - Recife">
 
-            <img
-              v-if="logo == 'porto'"
-              src="../../src/assets/images/logo-porto.png"
-              alt="Caldinho do Neném - Porto de Galinhas">
-          </li>
+              <img
+                v-if="logo == 'porto'"
+                src="../../src/assets/images/logo-porto.png"
+                alt="Caldinho do Neném - Porto de Galinhas">
+            </li>
 
-          <li class="social">
-            <a href="https://fb.com" class="social-link facebook" title="Facebook" target="_blank">
-              Facebook
-            </a>
+            <li class="social">
+              <a href="https://fb.com" class="social-link facebook" title="Facebook" target="_blank">
+                Facebook
+              </a>
 
-            <a href="https://instagram.com" class="social-link instagram" title="Instagram" target="_blank">
-              Instagram
-            </a>
-          </li>
-        </ul>
-      </aside>
+              <a href="https://instagram.com" class="social-link instagram" title="Instagram" target="_blank">
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </aside>
 
-      <aside class="column is-half form-area">
-        <form @submit.prevent="handleSubmit" class="form-primary"
-          data-title="Dúvidas, reservas ou sugestões, fale conosco.">
-          <div class="control">
-            <input
-              class="input"
-              type="text"
-              required
-              v-model="form.name"
-              placeholder="Nome">
-          </div>
+        <aside class="column is-half form-area">
+          <form @submit.prevent="handleSubmit" class="form-primary"
+            data-title="Dúvidas, reservas ou sugestões, fale conosco.">
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                required
+                v-model="form.name"
+                placeholder="Nome">
+            </div>
 
-          <div class="control">
-            <input
-              class="input"
-              type="tel"
-              required
-              v-model="form.phone"
-              placeholder="Telefone">
-          </div>
+            <div class="control">
+              <input
+                class="input"
+                type="tel"
+                required
+                v-model="form.phone"
+                placeholder="Telefone">
+            </div>
 
-          <div class="control">
-            <input
-              class="input"
-              type="email"
-              required
-              v-model="form.email"
-              placeholder="Email">
-          </div>
+            <div class="control">
+              <input
+                class="input"
+                type="email"
+                required
+                v-model="form.email"
+                placeholder="Email">
+            </div>
 
-          <div class="control">
-            <textarea
-              class="textarea"
-              required
-              v-model="form.message"
-              placeholder="Mensagem">
-            </textarea>
-          </div>
+            <div class="control">
+              <textarea
+                class="textarea"
+                required
+                v-model="form.message"
+                placeholder="Mensagem">
+              </textarea>
+            </div>
 
-          <div class="control">
-            <button class="button is-primary btn-submit" type="submit">Enviar</button>
-          </div>
-        </form>
-      </aside>
-    </div>
+            <div class="control">
+              <button class="button is-primary btn-submit" type="submit">Enviar</button>
+            </div>
+          </form>
+        </aside>
+      </div>
 
-    <div class="columns">
-      <div class="column">
-        <span
-          class="notification"
-          :class="{
-            'is-success': alert.status == 200,
-            'is-warning': alert.status != 200
-          }"
-          v-if="alert.status">
-            <button class="delete" @click="hideMessage"></button>
+      <div class="columns">
+        <div class="column">
+          <span
+            class="notification"
+            :class="{
+              'is-success': alert.status == 200,
+              'is-warning': alert.status != 200
+            }"
+            v-if="alert.status">
+              <button class="delete" @click="hideMessage"></button>
 
-            {{alert.message}}
-          </span>
+              {{alert.message}}
+            </span>
+        </div>
       </div>
     </div>
   </section>
@@ -157,11 +159,6 @@
 </script>
 
 <style lang="scss">
-  $yellow: #C79C60;
-  $black: #000000;
-
-  // ====
-
   @mixin before($url) {
     &:after {
       content: '';
@@ -172,11 +169,20 @@
       position: absolute;
       top: -4px;
       left: -50px;
-      background-color: $yellow;
       background-repeat: no-repeat;
       background-size: 60%;
       background-position: center center;
       background-image: url($url);
+    }
+  }
+
+  .porto {
+    .contato-wrapper {
+      background-repeat: no-repeat;
+      background-position: center -50px;
+      background-size: cover;
+      background-color: transparent;
+      background-image: url('../assets/images/porto-header.jpg');
     }
   }
 
@@ -197,34 +203,16 @@
   .input {
     height: 4.285em;
     border-radius: 0;
-    border-color: $yellow;
-    color: $yellow;
-
-    &:active, &:focus, &:hover {
-      border-color: $black;
-    }
   }
 
   .textarea {
-    border-color: $yellow;
-    color: $yellow;
     border-radius: 0 0 3px 3px;
-
-    &:active, &:focus, &:hover {
-      border-color: $black;
-    }
   }
 
   .btn-submit {
     float: right;
     margin-top: 10px;
     background-color: transparent !important;
-    color: $yellow !important;
-
-    &:hover {
-      background-color: $yellow !important;
-      color: $black !important;
-    }
   }
 
   .form-primary {
@@ -233,7 +221,6 @@
     &:before {
       content: attr(data-title);
       display: inline-block;
-      color: $yellow;
       margin-bottom: 5px;
     }
   }
@@ -244,19 +231,17 @@
     h4 {
       font-size: 25px;
       font-weight: bold;
-      color: $yellow;
       margin-bottom: 10px;
     }
 
     li {
       font-size: 16px;
-      color: $yellow;
       margin-bottom: 10px;
       position: relative;
 
       &:first-child,
       &:nth-child(2) {
-        border-bottom: 1px solid $yellow;
+        border-bottom: 1px solid;
         padding-bottom: 10px;
 
         @include before('../assets/icons/marker.svg');
@@ -287,14 +272,9 @@
         margin-left: 15%;
 
         a {
-          background-color: $yellow;
           margin: 0 5px;
         }
       }
-    }
-
-    a {
-      color: $yellow;
     }
   }
 </style>

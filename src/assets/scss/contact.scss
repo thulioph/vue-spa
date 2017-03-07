@@ -1,0 +1,114 @@
+//
+// Recife
+//
+
+.recife {
+  .address-area {
+    h4, li, a {
+      color: #C79C60;
+    }
+  }
+
+  .input {
+    border-color: #C79C60;
+    color: #C79C60;
+
+    &:active, &:focus, &:hover {
+      border-color: #222222;
+    }
+  }
+
+  .textarea {
+    border-color: #C79C60;
+    color: #C79C60;
+
+    &:active, &:focus, &:hover {
+      border-color: #222222;
+    }
+  }
+
+  .btn-submit {
+    color: #C79C60 !important;
+
+    &:hover {
+      background-color: #C79C60 !important;
+      color: #222222 !important;
+    }
+  }
+
+  .form-primary {
+    &:before {
+      color: #C79C60;
+    }
+  }
+
+  .address-area {
+    &:first-child,
+    &:nth-child(2) {
+      border-bottom-color: #C79C60;
+    }
+
+    &.social {
+      a { background-color: #C79C60; }
+    }
+  }
+}
+
+//
+// Porto
+//
+
+
+.porto {
+  .address-area {
+    h4, li, a {
+      color: #cb181f;
+    }
+  }
+
+  .input {
+    border-color: #cb181f;
+    color: #cb181f;
+
+    &:active, &:focus, &:hover {
+      border-color: #222222;
+    }
+  }
+
+  .textarea {
+    border-color: #cb181f;
+    color: #cb181f;
+
+    &:active, &:focus, &:hover {
+      border-color: #222222;
+    }
+  }
+
+  .btn-submit {
+    color: #cb181f !important;
+
+    &:hover {
+      background-color: #cb181f !important;
+      color: #222222 !important;
+    }
+  }
+
+  .form-primary {
+    &:before {
+      color: #cb181f;
+    }
+  }
+
+  .address-area {
+    li {
+      &:first-child,
+      &:nth-child(2) {
+        border-bottom-color: #cb181f;
+      }
+
+      &.social {
+        a { background-color: #cb181f; }
+      }
+    }
+  }
+}

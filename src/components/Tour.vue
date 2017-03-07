@@ -23,8 +23,6 @@
 </script>
 
 <style lang="scss">
-  $yellow: #C79C60;
-
   .tour-iframe {
     width: 100%;
     height: 630px;
@@ -34,7 +32,6 @@
   .tour-title {
     text-align: center;
     font-size: 60px;
-    color: $yellow;
     margin: 25px 0;
   }
 </style>

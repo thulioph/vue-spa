@@ -46,13 +46,8 @@
 </script>
 
 <style lang="scss">
-  $yellow: #C79C60;
-  $gray: #292929;
-  $white: #FFFFFF;
-  $black: #000000;
-
   section {
-    margin-top: 3.5rem; // navbar height
+    padding-top: 3.5rem; // navbar height
   }
 
   .slide-header {
@@ -60,7 +55,6 @@
       text-align: center;
       font-size: 60px;
       margin-bottom: 25px;
-      color: $yellow;
     }
   }
 
@@ -80,10 +74,9 @@
 
   .slide-content {
     font-size: 15px;
-    color: $gray;
-    text-align: center;
 
     p {
+      text-align: center;
       margin-top: 50px;
     }
 
@@ -116,7 +109,6 @@
     top: 42%;
     width: 50px;
     height: 50px;
-    background-color: $white;
     text-indent: -9999px;
     cursor: pointer;
     opacity: .6;
@@ -156,7 +148,6 @@
       width: 10px;
       height: 10px;
       text-indent: -999px;
-      background: $white;
       opacity: .6;
       cursor: pointer;
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="pageClass">
     <cn-header
       :address="map.address"
       :logo="logo"
@@ -28,8 +28,17 @@
       </div>
 
       <p class="container" slot="slide-content">
-        O Caldinho do Nenen é o refúgio perfeito para quem busca momentos de descontração entre a família ou cercado de amigos, acompanhados sempre do melhor da gastronomia. A casa tem entre suas especialidades os famosos Caldinhos, eleitos pela revista Veja como o melhor da Cidade. Entre as diversas opções do cardápio estão os frutos do mar, preparados com ingredientes frescos, carnes, aves e ótimas opções para petiscos ou refeições. São mais de 20 anos servindo com prazer e atendendo com excelência. <br>
-        A estrutura do Caldinho do Nenen inclui o maior espaço kids da Cidade, amplo estacionamento com manobrista e área climatizada. Comprove a nossa qualidade, vem pro Caldinho do Nenen.
+        O Caldinho do Nenen é o refúgio perfeito para quem busca momentos de descontração entre a família ou cercado de amigos, acompanhados sempre do melhor da gastronomia. A casa tem entre suas especialidades os famosos Caldinhos, eleitos pela revista Veja como o melhor da Cidade. Entre as diversas opções do cardápio estão os frutos do mar, preparados com ingredientes frescos, carnes, aves e ótimas opções para petiscos ou refeições.
+
+        São mais de 20 anos servindo com prazer e atendendo com excelência.
+
+        <br>
+
+        A estrutura do Caldinho do Nenen inclui o maior espaço kids da Cidade, amplo estacionamento com manobrista e área climatizada.
+
+        <br>
+
+        Comprove a nossa qualidade, vem pro Caldinho do Nenen.
       </p>
     </cn-slide>
 
@@ -75,6 +84,7 @@
 
   export default {
     name: 'AppRecife',
+
     components: {
       Slick,
       cnHeader,
@@ -84,6 +94,7 @@
       cnTour,
       cnFooter
     },
+
     data() {
       return {
         slickOptions: {
@@ -97,11 +108,17 @@
           address: 'R. Nogueira de Souza, 363 Pina, Recife - PE'
         },
         logo: 'recife',
-        tourLink: 'https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1488653066162!6m8!1m7!1sLk41C_cpD-8AAAQvxYOsKA!2m2!1d-8.087368571040457!2d-34.88938342633912!3f175.72!4f-5.5!5f0.7820865974627469'
+        tourLink: 'https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1488653066162!6m8!1m7!1sLk41C_cpD-8AAAQvxYOsKA!2m2!1d-8.087368571040457!2d-34.88938342633912!3f175.72!4f-5.5!5f0.7820865974627469',
+        pageClass: ''
+      }
+    },
+
+    mounted() {
+      if (this.$route.name && this.$route.name === 'recife') {
+        this.pageClass = this.$route.name;
       }
     }
   }
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
