@@ -30,9 +30,14 @@
 
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <img src="./assets/slides/slide-02.jpg" alt="">
-          <img src="./assets/slides/slide-02.jpg" alt="">
-          <img src="./assets/slides/slide-02.jpg" alt="">
+          <img
+            src="./assets/images/o-caldinho/01.jpg" alt="">
+          <img
+            src="./assets/images/o-caldinho/02.jpg" alt="">
+          <img
+            src="./assets/images/o-caldinho/03.jpg" alt="">
+          <img
+            src="./assets/images/o-caldinho/04.jpg" alt="">
         </slick>
       </div>
 
@@ -56,11 +61,16 @@
     </cn-tour>
 
     <cn-slide id="cardapio">
+      <h1 slot="slide-title">Cardápio</h1>
+
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <img src="./assets/slides/slide-03.jpg" alt="">
-          <img src="./assets/slides/slide-03.jpg" alt="">
-          <img src="./assets/slides/slide-03.jpg" alt="">
+          <img
+            src="./assets/images/cardapio/01.jpg" alt="">
+          <img
+            src="./assets/images/cardapio/02.jpg" alt="">
+          <img
+            src="./assets/images/cardapio/04.jpg" alt="">
         </slick>
       </div>
     </cn-slide>
