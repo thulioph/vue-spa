@@ -65,12 +65,28 @@
 
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <img
-            src="./assets/images/cardapio/cardapio_01.jpg" alt="">
-          <img
-            src="./assets/images/cardapio/cardapio_02.jpg" alt="">
-          <img
-            src="./assets/images/cardapio/cardapio_04.jpg" alt="">
+          <a class="slide-link">
+            <img
+              src="./assets/images/cardapio/cardapio_01.jpg" alt="">
+          </a>
+
+          <a class="slide-link">
+            <img
+              src="./assets/images/cardapio/cardapio_02.jpg" alt="">
+          </a>
+
+          <a class="slide-link">
+            <img
+              src="./assets/images/cardapio/cardapio_04.jpg" alt="">
+          </a>
+
+          <a
+            class="slide-link"
+            href="./assets/images/cardapio_download.pdf"
+            download>
+            <img
+              src="./assets/images/cardapio/cardapio_04.jpg" alt="">
+          </a>
         </slick>
       </div>
     </cn-slide>
