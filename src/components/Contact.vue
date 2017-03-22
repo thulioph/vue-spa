@@ -17,6 +17,10 @@
               <a href="mailto:contato@caldinhodonenem.com.br">contato@caldinhodonenem.com.br</a>
             </li>
 
+            <li class="work">
+              <a @click="openModal">Trabalhe conosco</a>
+            </li>
+
             <li class="logo">
               <img
                 v-if="logo == 'recife'"
@@ -103,14 +107,22 @@
         </div>
       </div>
     </div>
+
+    <cn-modal :active="modalActive"></cn-modal>
   </section>
 </template>
 
 <script>
+  import cnModal from '../components/Modal.vue';
+
   let apiUrl = 'https://formspree.io/thulioph@gmail.com';
 
   export default {
     name: 'Contact',
+
+    components: {
+      cnModal
+    },
 
     props: ['logo'],
 
@@ -122,7 +134,8 @@
           email: '',
           message: ''
         },
-        alert: ''
+        alert: '',
+        modalActive: false
       }
     },
 
@@ -153,6 +166,10 @@
 
       hideMessage() {
         this.alert = {};
+      },
+
+      openModal() {
+        this.modalActive = !this.modalActive;
       }
     }
   }
@@ -259,6 +276,13 @@
         font-size: 16px;
 
         @include before('../assets/icons/email.svg');
+      }
+
+      &.work {
+        font-weight: bold;
+        font-size: 16px;
+
+        @include before('../assets/icons/work.svg');
       }
 
       &.logo {
