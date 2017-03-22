@@ -105,7 +105,7 @@
     props: ['address', 'logo'],
 
     methods: {
-      goTo($event) {
+      goTo(event) {
         let targetElement = event.target.hash.replace('#', '');
         let element = document.getElementById(targetElement).offsetTop - 110;
 
