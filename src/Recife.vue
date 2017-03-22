@@ -9,9 +9,15 @@
     <cn-slide>
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <img src="./assets/slides/slide-01.jpg" alt="">
-          <img src="./assets/slides/slide-01.jpg" alt="">
-          <img src="./assets/slides/slide-01.jpg" alt="">
+          <img
+            class="slide-image"
+            src="./assets/images/cardapio/01.jpg" alt="">
+          <img
+            class="slide-image"
+            src="./assets/images/cardapio/02.jpg" alt="">
+          <img
+            class="slide-image"
+            src="./assets/images/cardapio/04.jpg" alt="">
         </slick>
       </div>
     </cn-slide>
@@ -98,7 +104,6 @@
     data() {
       return {
         slickOptions: {
-          slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
           speed: 300
@@ -121,4 +126,8 @@
   }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .slide-image {
+    max-height: 700px;
+  }
+</style>

@@ -9,7 +9,9 @@
         </div>
 
         <div class="slide-image">
-          <slot name="slide-image"></slot>
+          <slick ref="slick" :options="slickOptions">
+            <slot name="slide-image"></slot>
+          </slick>
         </div>
 
         <div class="slide-content">
@@ -35,7 +37,6 @@
     data() {
       return {
         slickOptions: {
-          slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
           speed: 300
