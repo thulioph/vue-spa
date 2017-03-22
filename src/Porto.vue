@@ -11,16 +11,16 @@
         <slick ref="slick" :options="slickOptions">
           <img
             class="slide-image"
-            src="./assets/images/home/01.jpg" alt="">
+            src="./assets/images/home/home_01.jpg" alt="">
           <img
             class="slide-image"
-            src="./assets/images/home/02.jpg" alt="">
+            src="./assets/images/home/home_02.jpg" alt="">
           <img
             class="slide-image"
-            src="./assets/images/home/03.jpg" alt="">
+            src="./assets/images/home/home_03.jpg" alt="">
           <img
             class="slide-image"
-            src="./assets/images/home/04.jpg" alt="">
+            src="./assets/images/home/home_04.jpg" alt="">
         </slick>
       </div>
     </cn-slide>
@@ -31,13 +31,13 @@
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
           <img
-            src="./assets/images/o-caldinho/01.jpg" alt="">
+            src="./assets/images/o-caldinho/caldinho_01.jpg" alt="">
           <img
-            src="./assets/images/o-caldinho/02.jpg" alt="">
+            src="./assets/images/o-caldinho/caldinho_02.jpg" alt="">
           <img
-            src="./assets/images/o-caldinho/03.jpg" alt="">
+            src="./assets/images/o-caldinho/caldinho_03.jpg" alt="">
           <img
-            src="./assets/images/o-caldinho/04.jpg" alt="">
+            src="./assets/images/o-caldinho/caldinho_04.jpg" alt="">
         </slick>
       </div>
 
@@ -66,11 +66,11 @@
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
           <img
-            src="./assets/images/cardapio/01.jpg" alt="">
+            src="./assets/images/cardapio/cardapio_01.jpg" alt="">
           <img
-            src="./assets/images/cardapio/02.jpg" alt="">
+            src="./assets/images/cardapio/cardapio_02.jpg" alt="">
           <img
-            src="./assets/images/cardapio/04.jpg" alt="">
+            src="./assets/images/cardapio/cardapio_04.jpg" alt="">
         </slick>
       </div>
     </cn-slide>
