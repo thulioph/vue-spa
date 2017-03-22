@@ -167,4 +167,11 @@
     max-width: 100% !important;
   }
 }
+
+#cardapio {
+  img {
+    height: 700px;
+    max-width: 100% !important;
+  }
+}
 </style>

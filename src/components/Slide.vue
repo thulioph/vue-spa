@@ -59,7 +59,7 @@
 
   .slide-container {
     height: auto;
-    max-height: 700px;
+    // max-height: 700px;
     width: 100%;
     overflow: hidden;
   }
