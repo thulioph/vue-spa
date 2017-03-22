@@ -11,13 +11,16 @@
         <slick ref="slick" :options="slickOptions">
           <img
             class="slide-image"
-            src="./assets/images/cardapio/01.jpg" alt="">
+            src="./assets/images/home/01.jpg" alt="">
           <img
             class="slide-image"
-            src="./assets/images/cardapio/02.jpg" alt="">
+            src="./assets/images/home/02.jpg" alt="">
           <img
             class="slide-image"
-            src="./assets/images/cardapio/04.jpg" alt="">
+            src="./assets/images/home/03.jpg" alt="">
+          <img
+            class="slide-image"
+            src="./assets/images/home/04.jpg" alt="">
         </slick>
       </div>
     </cn-slide>

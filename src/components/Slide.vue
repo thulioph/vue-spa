@@ -9,9 +9,7 @@
         </div>
 
         <div class="slide-image">
-          <slick ref="slick" :options="slickOptions">
-            <slot name="slide-image"></slot>
-          </slick>
+          <slot name="slide-image"></slot>
         </div>
 
         <div class="slide-content">
@@ -48,7 +46,7 @@
 
 <style lang="scss">
   section {
-    padding-top: 3.5rem; // navbar height
+    padding-top: 10rem; // navbar height
   }
 
   .slide-header {
