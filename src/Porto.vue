@@ -9,9 +9,18 @@
     <cn-slide>
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <img src="./assets/slides/slide-01.jpg" alt="">
-          <img src="./assets/slides/slide-01.jpg" alt="">
-          <img src="./assets/slides/slide-01.jpg" alt="">
+          <img
+            class="slide-image"
+            src="./assets/images/home/home_01.jpg" alt="">
+          <img
+            class="slide-image"
+            src="./assets/images/home/home_02.jpg" alt="">
+          <img
+            class="slide-image"
+            src="./assets/images/home/home_03.jpg" alt="">
+          <img
+            class="slide-image"
+            src="./assets/images/home/home_04.jpg" alt="">
         </slick>
       </div>
     </cn-slide>
@@ -21,9 +30,14 @@
 
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <img src="./assets/slides/slide-02.jpg" alt="">
-          <img src="./assets/slides/slide-02.jpg" alt="">
-          <img src="./assets/slides/slide-02.jpg" alt="">
+          <img
+            src="./assets/images/o-caldinho/caldinho_01.jpg" alt="">
+          <img
+            src="./assets/images/o-caldinho/caldinho_02.jpg" alt="">
+          <img
+            src="./assets/images/o-caldinho/caldinho_03.jpg" alt="">
+          <img
+            src="./assets/images/o-caldinho/caldinho_04.jpg" alt="">
         </slick>
       </div>
 
@@ -51,9 +65,28 @@
 
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
-          <img src="./assets/slides/slide-03.jpg" alt="">
-          <img src="./assets/slides/slide-03.jpg" alt="">
-          <img src="./assets/slides/slide-03.jpg" alt="">
+          <a class="slide-link">
+            <img
+              src="./assets/images/cardapio/cardapio_01.jpg" alt="">
+          </a>
+
+          <a class="slide-link">
+            <img
+              src="./assets/images/cardapio/cardapio_02.jpg" alt="">
+          </a>
+
+          <a class="slide-link">
+            <img
+              src="./assets/images/cardapio/cardapio_04.jpg" alt="">
+          </a>
+
+          <a
+            class="slide-link"
+            href="./assets/images/cardapio_download.pdf"
+            download>
+            <img
+              src="./assets/images/cardapio/cardapio_04.jpg" alt="">
+          </a>
         </slick>
       </div>
     </cn-slide>
@@ -100,7 +133,6 @@
     data() {
       return {
         slickOptions: {
-          slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
           speed: 300
@@ -124,6 +156,10 @@
 </script>
 
 <style lang="scss">
+.slide-image {
+  max-height: 700px;
+}
+
 .porto {
   .nav {
     background-repeat: no-repeat;
@@ -138,7 +174,25 @@
     background-repeat: no-repeat;
     background-position: center 75%;
     background-color: transparent;
-    // background-image: url('./assets/images/porto-header.jpg');
   }
+}
+
+#sobre {
+  img {
+    height: 430px;
+    max-width: 100% !important;
+  }
+}
+
+#cardapio {
+  img {
+    height: 700px;
+    width: 100%;
+  }
+}
+
+.slide-link {
+  cursor: default;
+  display: inline-block;
 }
 </style>

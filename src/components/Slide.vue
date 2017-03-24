@@ -35,7 +35,6 @@
     data() {
       return {
         slickOptions: {
-          slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
           speed: 300
@@ -47,7 +46,7 @@
 
 <style lang="scss">
   section {
-    padding-top: 3.5rem; // navbar height
+    padding-top: 10rem; // navbar height
   }
 
   .slide-header {
@@ -60,7 +59,7 @@
 
   .slide-container {
     height: auto;
-    max-height: 700px;
+    // max-height: 700px;
     width: 100%;
     overflow: hidden;
   }

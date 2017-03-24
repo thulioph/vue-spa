@@ -105,9 +105,13 @@
     props: ['address', 'logo'],
 
     methods: {
-      goTo($event) {
+      goTo(event) {
         let targetElement = event.target.hash.replace('#', '');
-        let element = document.getElementById(targetElement).offsetTop - 110;
+        let element = document.getElementById(targetElement).offsetTop - 20;
+
+        if (targetElement === 'caldinho360') {
+          element = document.getElementById(targetElement).offsetTop - 175;
+        }
 
         // collapse the navbar
         this.showNavbar = false;
