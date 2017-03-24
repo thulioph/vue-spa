@@ -10,7 +10,7 @@
             <li>Praça das Piscinas Naturais, Galeria Verdes Mares, 1º Andar, Porto de Galinhas</li>
 
             <li class="phone">
-              <a href="tel:+558135521962">81 - 3552.1962</a>
+              <slot name="contact-number"></slot>
             </li>
 
             <li class="email">

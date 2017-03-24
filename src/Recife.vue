@@ -31,13 +31,11 @@
       <div slot="slide-image">
         <slick ref="slick" :options="slickOptions">
           <img
-            src="./assets/images/o-caldinho/caldinho_01.jpg" alt="">
+            src="./assets/images/o-caldinho/pina_01.jpg" alt="">
           <img
-            src="./assets/images/o-caldinho/caldinho_02.jpg" alt="">
+            src="./assets/images/o-caldinho/pina_02.jpg" alt="">
           <img
-            src="./assets/images/o-caldinho/caldinho_03.jpg" alt="">
-          <img
-            src="./assets/images/o-caldinho/caldinho_04.jpg" alt="">
+            src="./assets/images/o-caldinho/pina_03.jpg" alt="">
         </slick>
       </div>
 
@@ -91,9 +89,10 @@
       </div>
     </cn-slide>
 
-    <cn-contact
-      id="contato"
-      :logo="logo">
+    <cn-contact id="contato" :logo="logo">
+      <a href="tel:+558134666455" slot="contact-number">
+        81 - 3466.6455
+      </a>
     </cn-contact>
 
     <cn-map
