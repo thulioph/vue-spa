@@ -11,13 +11,10 @@
         <slick ref="slick" :options="slickOptions">
           <img
             class="slide-image"
-            src="./assets/images/home/home_01.jpg" alt="">
+            src="./assets/images/home/nova_01.jpg" alt="">
           <img
             class="slide-image"
-            src="./assets/images/home/home_02.jpg" alt="">
-          <img
-            class="slide-image"
-            src="./assets/images/home/home_03.jpg" alt="">
+            src="./assets/images/home/nova_02.jpg" alt="">
           <img
             class="slide-image"
             src="./assets/images/home/home_04.jpg" alt="">
