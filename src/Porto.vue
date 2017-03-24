@@ -79,9 +79,10 @@
       </div>
     </cn-slide>
 
-    <cn-contact
-      id="contato"
-      :logo="logo">
+    <cn-contact id="contato" :logo="logo">
+      <a href="tel:+558135521962" slot="contact-number">
+        81 - 3552.1962
+      </a>
     </cn-contact>
 
     <cn-map

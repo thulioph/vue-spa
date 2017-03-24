@@ -91,9 +91,10 @@
       </div>
     </cn-slide>
 
-    <cn-contact
-      id="contato"
-      :logo="logo">
+    <cn-contact id="contato" :logo="logo">
+      <a href="tel:+558134666455" slot="contact-number">
+        81 - 3466.6455
+      </a>
     </cn-contact>
 
     <cn-map
