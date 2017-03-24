@@ -29,7 +29,7 @@
         <p>Praça das Piscinas Naturais, Galeria Verdes Mares, 1º Andar, Porto de Galinhas-PE</p>
 
         <h3>Fone:</h3>
-        <a href="tel+558135521962">81 - 3552.1962</a>
+        <a href="tel:+558135521962">81 - 3552.1962</a>
       </aside>
 
       <aside class="column is-one-third">
@@ -130,7 +130,8 @@
   .app-container {
     position: relative;
     text-align: center;
-    min-height: 940px;
+    height: auto;
+    min-height: 650px;
     margin-bottom: 0 !important;
     border-bottom: 20px solid;
 
@@ -142,7 +143,7 @@
   }
 
   .choose-box {
-    padding: 15% 0 30px 0;
+    padding: 7% 0 30px 0;
 
     h1 {
       text-transform: uppercase;
@@ -222,5 +223,11 @@
   .notification {
     text-align: center;
     margin-top: 20px;
+  }
+
+  button {
+    &.is-primary {
+      height: 4.285em;
+    }
   }
 </style>
