@@ -42,17 +42,8 @@
       </div>
 
       <p class="container" slot="slide-content">
-        O Caldinho do Nenen é o refúgio perfeito para quem busca momentos de descontração entre a família ou cercado de amigos, acompanhados sempre do melhor da gastronomia. A casa tem entre suas especialidades os famosos Caldinhos, eleitos pela revista Veja como o melhor da Cidade. Entre as diversas opções do cardápio estão os frutos do mar, preparados com ingredientes frescos, carnes, aves e ótimas opções para petiscos ou refeições.
-
-        São mais de 20 anos servindo com prazer e atendendo com excelência.
-
-        <br>
-
-        A estrutura do Caldinho do Nenen inclui o maior espaço kids da Cidade, amplo estacionamento com manobrista e área climatizada.
-
-        <br>
-
-        Comprove a nossa qualidade, vem pro Caldinho do Nenen.
+        Desde 2015 O Caldinho do Nenen aportou em Porto de Galinhas e desde então arrebatou os paladares dos turistas que visitam a melhor praia do Brasil.  Com um tempero inigualável, a nossa cozinha é especializada em frutos do mar, o segredo são os ingredientes frescos, ostras, caranguejos e guaiamuns conservados vivos fazem grande sucesso por aqui.
+        Nossa casa tem ambientação aconchegante concebida cuidadosamente para você se sentir bem, aliás, não tem como ficar de outra forma com a vista espetacular do Caldinho do Nenen Porto de Galinhas, com as piscinas naturais bem à sua frente, estamos aguardando você.
       </p>
     </cn-slide>
 
